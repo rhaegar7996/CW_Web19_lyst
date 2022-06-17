@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your World of Fashion | Lyst</title>
+    <link rel = "icon" href ="https://www.lyst.com/favicon.ico" type = "image/x-icon">
+    <!-- External link for nav bar -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700">
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+    <!-- end External link for nav bar -->
+    <!-- link navbar css page -->
+    <link rel="stylesheet" href="navbar.css">
+    <!-- font link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <!-- font Link end -->
+ 
+   
+
+    <!-- https://drive.google.com/file/d/1N9G-W1btDFRqzL8vabQT56qu37wJL937/view?usp=sharing -->
+   
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: sans-serif;
+            font-weight: lighter;
+        }
+        body {
+             width: 100%;
+            }
+        
+
+        #heading {
+            width: 100%;
+            height: 100px;
+            box-sizing: border-box;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            background-color: #f5f4f2;
+            }
+
+        #heading>div {
+            width: 70%;
+            height: fit-content;
+        }
+
+        #container {
+            width: auto;
+            height: auto;
+        }
+
+        #mainBody {
+            width: 80%;
+            height: auto;
+            margin: auto;
+        }
+
+        #sidebar {
+            height: 60px;
+            display: grid;
+            align-items: center;
+            padding-left: 75%;
+        }
+
+        #sidebar>select {
+            width: auto;
+            height: 40px;
+            border: 2px solid black;
+            /* border-radius: 5px; */
+            font-weight: bold;
+            padding-left: 10px;
+        }
+
+        #box {
+            margin-left: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto;
+        }
+
+        #box>div {
+            border: 0.2px solid rgb(161, 147, 147);
+            height: auto;
+        }
+
+        #box>div>div:nth-child(1) {
+            width: 100%;
+        }
+
+        #box>div>div>img {
+            display: block;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        #box>div>div:nth-child(2) {
+            margin: 5px 10px;
+        }
+
+        #mainBody {
+            display: flex;
+            width: 80%;
+            height: auto;
+        }
+
+        #sideMain {
+            width: 50%;
+            padding: 5px;
+            display: block;
+        }
+
+        #sideMain>div:nth-child(1) {
+            width: 100%;
+            height: 60px;
+            display: grid;
+            align-items: center;
+            font-size: 26px;
+        }
+
+        #sideMain>div:nth-child(2) {
+            width: 100%;
+            height: auto;
+            margin-top: 10px;
+            border-top: 0.5px solid grey;
+            border-bottom: 0.5px solid grey;
+        }
+
+        #sideMain>div:nth-child(2)>select {
+            width: 100%;
+            height: 50px;
+            border: none;
+            border-top: 0.5px solid grey;
+            border-bottom: 0.5px solid grey;
+            font-size: large;
+            font-weight: bold;
+        }
+
+        p:first-child {
+            color: black;
+            font-weight: bold;
+        }
+
+        p:nth-child(2) {
+            margin: 3px 0px;
+            color: rgb(31, 27, 27);
+            font-size: 16px;
+        }
+
+        h3 {
+            margin-top: 7px;
+            font-weight: bold;
+        }
+
+        #box>div>div:nth-child(1) {
+            height: 260px;
+            padding: 5px;
+        }
+
+        #box>div>div:nth-child(2) {
+            height: 100px;
+            padding: 3px;
+        }
+
+        #box>div>div:nth-child(3) {
+
+            padding: 5%;
+            position: sticky;
+        }
+
+        button {
+            font-weight: bold;
+            height: 35px;
+            width: 100%
+        }
+
+        button:hover {
+            color: blue;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar" class="header" data-scroll>
+        
+        <div>
+        <p id="country"> CN-US$</p>
+            <div id="set_country">
+            <i class="material-icons" style="font-size: 30px ; margin-left:90%; background-color: #f5f4f2; border-radius:50%" id="close_display">close</i>
+            <h2>Set your country</h2>
+            
+            <select id="country">
+                <option>Select Country</option>
+            </select>
+            <button>Set Country</button>
+        
+        
+            </div>
+            <p id="help">Help</p>
+            <div  class="helplist arrow-top">
+            <span class="close"></span>
+            <a href="#">Help Center</a>
+            <hr color="black" />
+            <a href="#">Contact us</a>
+                <hr color="black" />
+            <a href="#">About us</a>
+            <hr color="black" />
+            <a href="#">Careers</a>
+            <hr color="black" />
+            </div>
+            <p><a href=signin.html">Sign in</a></p>
+            <p><a href=signup.html">Join</a></p>
+            
+        </div>
+        
+        <div>
+        <i class="material-icons" id="search_icon">search</i>
+        <img  alt="Lyst" id="logo" src="https://static.lystit.com/static/n/pr_campaigns/year_in_fashion_2020/images/logo.a9c5dfdd1a8b.png"/>
+        <i class="material-icons" id="person_icon" style="font-size:36px;">person_outline</i>
+            <div id="menu_icon" onclick="redirect(this)">
+            <div class="line1 "></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+            <div class="line4"></div>
+        
+        </div>
+        <p class="option"><a href="womenslist.html">WOMEN</a></p>
+        <p class="option"><a href="menslist.html">MEN</a></p>
+        <input id="search" type="search" placeholder='SEARCH (E.G."ACNE JEANS")' icon="search"/>
+        <i class="material-icons" style="font-size: 36px" id="close_search">close</i>
+        </div>
+    </div>
+
+    <div id="heading">
+        <div>
+            <h1>CLOTHING FOR WOMEN</h1>
+        </div>
+    </div>
+    <div id="mainBody">
+        <div id="sideMain">
+            <div>Filters</div>
+            <div>
+                <select name="Gender" id="Gender">
+                    <option value="Gender">Gender</option>
+                    <option value="Women's">Women's</option>
+                    <option value="Men's">Men's</option>
+                </select>
+                <select name="Category" id="Category">
+                    <option value="Category">Category</option>
+                    <option value="Category">All</option>
+                    <option value="Dresses">Dresses</option>
+                    <option value="Pants">Pants</option>
+                    <option value="Mini Dress">Mini Dress</option>
+                    <option value="Top">Top</option>
+                    <option value="Blazer">Blazer</option>
+                    <option value="Shorts">Shorts</option>
+                    <option value="Skirts">Skirts</option>
+                    <option value="Gown">Gown</option>
+                </select>
+                <select name="Brand" id="Brand">
+                    <option value="">Brand</option>
+                    <option value="All">All</option>
+                    <option value="Nasty Gal">Nasty Gal</option>
+                    <option value="Jean Paul Gaultier">Jean Paul Gaultier</option>
+                    <option value="Sachin & Babi">Sachin & Babi</option>
+                </select>
+                <select name="Price" id="Price">
+                    <option value="Price">Price</option>
+                </select>
+                <select name="Shipping" id="Shipping">
+                    <option value="Shipping">Shipping</option>
+                </select>
+                <select name="Color" id="Color">
+                    <option value="Color">Color</option>
+                </select>
+                <select name="Material" id="Material">
+                    <option value="Material">Material</option>
+                </select>
+                <select name="Designer" id="Designer">
+                    <option value="Designer">Designer</option>
+                </select>
+                <select name="Stores" id="Stores">
+                    <option value="Stores">Stores</option>
+                </select>
+            </div>
+        </div>
+        <div id="container">
+            <div id="sidebar">
+                <select name="Sort by recomended" id="SortPrice">
+                    <option value="Sort by recomended">Sort by recomended</option>
+                    <option value="Descending">Sort by Price(High to Low)</option>
+                    <option value="Ascending">Sort by Price(Low to High)</option>
+                </select>
+            </div>
+            <div id="box"></div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+
+<script>
+    let womenClothing = [
+        {
+            img:
+                "https://cdna.lystit.com/200/250/tr/photos/nastygal/f127a618/nasty-gal-designer-champagne-Cowl-Back-Satin-Wrap-Maxi-Dress.jpeg",
+            brand: "Nasty Gal",
+            product_name: "Women's Cowl Back Satin Wrap Maxi Dress",
+            product_id: "women1",
+            category: "Dresses",
+            price: 103,
+            price2: 72,
+            gender: "women",
+        },
+        {
+            img:
+                "https://cdna.lystit.com/200/250/tr/photos/nastygal/b7f02410/nasty-gal-designer-beige-Sequin-Embellished-Strappy-Tulle-Maxi-Dress.jpeg",
+            brand: "Nasty Gal",
+            product_name: "Women's Natural Sequin Embellished Strappy Tulle Maxi Dress",
+            product_id: "women2",
+            category: "Dresses ",
+            price: 365,
+            price2: 256,
+            gender: "women",
+        },
+        {
+            img:
+                "https://cdna.lystit.com/200/250/tr/photos/mytheresa/2a93cbd9/jean-paul-gaultier-brown-X-Lotta-Volkova-Sheer-Knit-Top.jpeg",
+            brand: "Jean Paul Gaultier",
+            product_name: "Women's Brown X Lotta Volkova Sheer Knit Top",
+            product_id: "women3",
+            category: "Top",
+            price: 396,
+            price2: "🚚",
+        },
+        {
+            img:
+                "https://cdna.lystit.com/200/250/tr/photos/nastygal/a588672c/nasty-gal-designer-green-Warehouse-Sequin-Halter-Drape-Back-Midi-Dress.jpeg",
+            brand: "Nasty Gal",
+            product_name: "Women's Green Warehouse Sequin Halter Drape Back Midi Dress",
+            product_id: "women4",
+            category: "Dresses",
+            price: 126,
+            price2: 86,
+        },
+        {
+            img:
+                "https://cdna.lystit.com/200/250/tr/photos/nastygal/a3586e8c/nasty-gal-designer-blue-Floral-Jacquard-Balloon-Sleeve-Skater-Mini-Dress.jpeg",
+            brand: "Nasty Gal",
+            product_name: "Women's Blue Floral Jacquard Balloon Sleeve Skater Mini Dress",
+            product_id: "women5",
+            category: "Mini Dress",
+            price: 72,
+            price2: 51,
+        },
+        {
+            img:
+                "https://cdna.lystit.com/200/250/tr/photos/nastygal/8ac9632e/nasty-gal-designer-pink-Midi-Shirt-Dress-In-Print.jpeg",
+            brand: "Nasty Gal",
+            product_name: "Women's Pink Midi Shirt Dress In Print",
+            product_id: "women6",
+            category: "Dresses",
+            price: 67,
+            price2: 19,
+        },
+        {
+            img:
+                "https://cdna.lystit.com/200/250/tr/photos/mytheresa/5810cf6b/jean-paul-gaultier-green-X-Lotta-Volkova-Satin-And-Mesh-Bra-Top.jpeg",
+            brand: "Nasty Gal",
+            product_name: "Women's Green X Lotta Volkova Satin And Mesh Bra Top",
+            product_id: "women7",
+            category: "Top",
+            price: 574,
+            price2: "🚚",
+        },
+        {
+            img:
+                "https://cdna.lystit.com/200/250/tr/photos/nastygal/9b5a2cab/nasty-gal-designer-white-Playing-For-Flower-Floral-Midi-Dress.jpeg",
+            brand: "Nasty Gal",
+            product_name: "Women's White Playing For Flower Floral Midi Dress",
+            product_id: "women8",
+            category: "Dresses",
+            price: 62,
+            price2: 34,
+        },
+        {
+            img:
+                "https://cdna.lystit.com/200/250/tr/photos/mytheresa/1d2b640b/jean-paul-gaultier-brown-X-Lotta-Volkova-High-rise-Flared-Pants.jpeg",
+            brand: "Jean Paul Gaultier",
+            product_name: "Women's Brown X Lotta Volkova High-rise Flared Pants",
+            product_id: "women9",
+            category: "Pants",
+            price: 396,
+            price2: "🚚",
+        },
+        {
+            img:
+                "https://cdna.lystit.com/200/250/tr/photos/mytheresa/48271bd8/jean-paul-gaultier-Beige-X-Lotta-Volkova-Top-semitrasparente-in-maglia.jpeg",
+            brand: "Jean Paul Gaultier",
+            product_name: "Women's Natural X Lotta Volkova Sheer Knit Top",
+            product_id: "women10",
+            category: "Top",
+            price: 396,
+            price2: "🚚",
+        },
+        {
+            img:
+                "https://cdna.lystit.com/200/250/tr/photos/nastygal/7a7d757a/nasty-gal-designer-black-Recycled-Plunging-V-Neck-Slit-Midi-Dress.jpeg",
+            brand: "Nasty Gal",
+            product_name: "Women's Recycled Plunging V Neck Slit Midi Dress",
+            product_id: "women11",
+            category: "Dresses",
+            price: 47,
+            price2: 37,
+        },
+        {
+            img:
+                "https://cdna.lystit.com/200/250/tr/photos/mytheresa/d5b3db80/jean-paul-gaultier-beige-X-Lotta-Volkova-High-rise-Flared-Pants.jpeg",
+            brand: "Jean Paul Gaultier",
+            product_name: "Women's Natural X Lotta Volkova High-rise Flared Pants",
+            product_id: "women12",
+            category: "Pants",
+            price: 396,
+            price2: "🚚",
+        },
+        {
+            img:
+                "https://cdna.lystit.com/200/250/tr/photos/nastygal/5b2352bd/nasty-gal-designer-black-Embellished-Sequin-Fringe-Trim-Bodycon-Mini-Dress.jpeg",
+            brand: "Nasty Gal",
+            product_name: "Women's Black Embellished Sequin Fringe Trim Mini Dress",
+            product_id: "women13",
+            category: "Mini Dress",
+            price: 219,
+            price2: 153,
+        },
+        {
+            img:
+                "https://cdna.lystit.com/200/250/tr/photos/nastygal/6756dac4/nasty-gal-designer-olive-Sequin-Split-Front-Midi-Tea-Dress.jpeg",
+            brand: "Nasty Gal",
+            product_name: "Women's Green Sequin Split Front Midi Tea Dress",
+            product_id: "women14",
+            category: "Dresses",
+            price: 117,
+            price2: 47,
+        },
+        {
+            img:
+                "https://cdna.lystit.com/200/250/tr/photos/mytheresa/4c1fe1da/jean-paul-gaultier-blue-Pleated-Leather-Minidress.jpeg",
+            brand: "Jean Paul Gaultier",
+            product_name: "Women's Blue Pleated Leather Minidress",
+            product_id: "women15",
+            category: "Mini Dress",
+            price: 1321,
+            price2: "🚚",
+        },
+        {
+            img:
+                "https://cdna.lystit.com/200/250/tr/photos/nastygal/3e072fc6/nasty-gal-designer-orange-Sheer-Sleeve-Maxi-Slit-Wrap-Dress.jpeg",
+            brand: "Nasty Gal",
+            product_name: "Women's Orange Sheer Sleeve Maxi Slit Wrap Dress",
+            product_id: "women16",
+            category: "Dresses",
+            price: 88,
+            price2: 30,
+        },
+        {
+            img:
+                "https://cdna.lystit.com/200/250/tr/photos/nastygal/07d0e3b7/nasty-gal-designer-green-Satin-Balloon-Sleeve-Wrap-Maxi-Dress.jpeg",
+            brand: "Nasty Gal",
+            product_name: "Women's Green Satin Balloon Sleeve Wrap Maxi Dress",
+            product_id: "women17",
+            category: "Dresses",
+            price: 68,
+            price2: "🚚",
+        },
+        {
+            img:
+                "https://cdna.lystit.com/200/250/tr/photos/nastygal/42fb250c/nasty-gal-designer-cream-Cowl-Back-Satin-Wrap-Maxi-Dress.jpeg",
+            brand: "Nasty Gal",
+            product_name: "Women's Natural Cowl Back Satin Wrap Maxi Dress",
+            product_id: "women18",
+            category: "Dresses",
+            price: 103,
+            price2: 72,
+        },
+        {
+            img:
+                "https://cdna.lystit.com/200/250/tr/photos/mytheresa/0a7f3e90/jean-paul-gaultier-beige-X-Lotta-Volkova-Double-breasted-Cutout-Wool-Blazer.jpeg",
+            brand: "Jean Paul Gaultier",
+            product_name: "Women's Natural X Lotta Volkova Double-breasted Cutout Wool Blazer",
+            product_id: "women19",
+            category: "Blazer",
+            price: 1164,
+            price2: "🚚",
+        },
+        {
+            img:
+                "https://cdna.lystit.com/200/250/tr/photos/nastygal/f25ba4c0/nasty-gal-designer-rose-Satin-Balloon-Sleeve-Wrap-Maxi-Dress.jpeg",
+            brand: "Nasty Gal",
+            product_name: "Women's Satin Balloon Sleeve Wrap Maxi Dress",
+            product_id: "women20",
+            category: "Dresses",
+            price: 97,
+            price2: 68,
+        },
+        {
+            img:
+                "https://cdna.lystit.com/200/250/tr/photos/mytheresa/eb02a65b/jean-paul-gaultier-brown-X-Lotta-Volkova-Blazer-mit-Cut-outs.jpeg",
+            brand: "Jean Paul Gaultier",
+            product_name: "Women's Brown X Lotta Volkova Cutout Blazer",
+            product_id: "women21",
+            category: "Blazer",
+            price: 1054,
+            price2: "🚚",
+        },
+        {
+            img:
+                "https://cdna.lystit.com/200/250/tr/photos/nastygal/f79062a1/nasty-gal-designer-champagne-Sequin-V-Neck-Angel-Sleeve-Maxi-Dress.jpeg",
+            brand: "Nasty Gal",
+            product_name: "Women's Metallic Sequin V Neck Angel Sleeve Maxi Dress",
+            product_id: "women22",
+            category: "Dresses",
+            price: 190,
+            price2: 133,
+        },
+        {
+            img:
+                "https://cdna.lystit.com/200/250/tr/photos/mytheresa/d26b2aa0/jean-paul-gaultier-green-X-Lotta-Volkova-Lace-up-Satin-And-Mesh-leggings.jpeg",
+            brand: "Jean Paul Gaultier",
+            product_name: "Women's Green X Lotta Volkova Lace-up Satin And Mesh leggings",
+            product_id: "women23",
+            category: "Pants",
+            price: 1070,
+            price2: "🚚",
+        },
+        {
+            img:
+                "https://cdna.lystit.com/200/250/tr/photos/mytheresa/a9d43d90/jean-paul-gaultier-black-X-Lotta-Volkova-Lace-up-Satin-And-Mesh-leggings.jpeg",
+            brand: "Jean Paul Gaultier",
+            product_name: "Women's Black X Lotta Volkova Lace-up Satin And Mesh leggings",
+            product_id: "women24",
+            category: "Pants",
+            price: 1070,
+            price2: "🚚",
+        },
+        {
+            img:
+                "https://cdna.lystit.com/200/250/tr/photos/net-a-porter/12fceeb1/jean-paul-gaultier-black-Lotta-Volkova-Bustier-Aus-Satin-Mit-Schnurung.jpeg",
+            brand: "Jean Paul Gaultier",
+            product_name: "Women's Black + Lotta Volkova Lace-up Satin Bralette",
+            product_id: "women25",
+            category: "Top",
+            price: 679,
+            price2: "🚚",
+        },
+        {
+            img:
+                "https://cdna.lystit.com/200/250/tr/photos/mytheresa/d7b1d89a/jean-paul-gaultier-black-Fitted-Blazer.jpeg",
+            brand: "Jean Paul Gaultier",
+            product_name: "Women's Black X Lotta Volkova Fitted Blazer",
+            product_id: "women26",
+            category: "Mini Dress",
+            price: 966,
+            price2: "🚚",
+        },
+        {
+            img:
+                "https://cdna.lystit.com/200/250/tr/photos/nastygal/9120b814/nasty-gal-designer-white-Balloon-Sleeve-Sequin-Embellished-Mini-Dress.jpeg",
+            brand: "Nasty Gal",
+            product_name: "Women's White Balloon Sleeve Sequin Embellished Mini Dress",
+            product_id: "women27",
+            category: "Mini Dress",
+            price: 190,
+            price2: 133,
+        },
+        {
+            img:
+                "https://cdna.lystit.com/200/250/tr/photos/nastygal/2fe282c9/nasty-gal-designer-off-white-Ruched-Bust-Tie-Back-Midi-Dress.jpeg",
+            brand: "Nasty Gal",
+            product_name: "Women's White Ruched Bust Tie Back Midi Dress",
+            product_id: "women28",
+            category: "Dresses",
+            price: 88,
+            price2: 44,
+        },
+        {
+            img:
+                "https://cdna.lystit.com/200/250/tr/photos/nastygal/24927641/nasty-gal-designer-pink-Blurred-Print-Satin-Column-Maxi-Dress.jpeg",
+            brand: "Nasty Gal",
+            product_name: "Women's Pink Blurred Print Satin Column Maxi Dress",
+            product_id: "women29",
+            category: "Dresses",
+            price: 97,
+            price2: 68,
+        },
+        {
+            img:
+                "https://cdna.lystit.com/200/250/tr/photos/mytheresa/a725b25d/jean-paul-gaultier-black-High-rise-Shorts.jpeg",
+            brand: "Jean Paul Gaultier",
+            product_name: "Women's Black X Lotta Volkova High-rise Shorts",
+            product_id: "women30",
+            category: "Shorts",
+            price: 642,
+            price2: "🚚",
+        },
+        {
+            img:
+                "https://cdna.lystit.com/200/250/tr/photos/mytheresa/f49db2a4/jean-paul-gaultier-black-X-Lotta-Volkova-Gonna-a-tubino-in-lana.jpeg",
+            brand: "Jean Paul Gaultier",
+            product_name: "Women's Black X Lotta Volkova Lace-up Wool Pencil Skirt",
+            product_id: "women31",
+            category: "Skirts",
+            price: 814,
+            price2: "🚚",
+        },
+        {
+            img:
+                "https://cdna.lystit.com/200/250/tr/photos/nastygal/683daba1/nasty-gal-designer-green-Floral-Print-Funnel-Neck-Midi-Smock-Dress.jpeg",
+            brand: "Nasty Gal",
+            product_name: "Women's Green Floral Print Funnel Neck Midi Smock Dress",
+            product_id: "women32",
+            category: "Mini Dress",
+            price: 67,
+            price2: 21,
+        },
+        {
+            img:
+                "https://cdna.lystit.com/200/250/tr/photos/mytheresa/1ceb04cf/jean-paul-gaultier-black-X-Lotta-Volkova-High-Rise-Hose.jpeg",
+            brand: "Jean Paul Gaultier",
+            product_name: "Women's Black X Lotta Volkova Wide-leg Pants",
+            product_id: "women33",
+            category: "Pants",
+            price: 455,
+            price2: "🚚"
+        },
+        {
+            img:
+                "https://cdna.lystit.com/200/250/tr/photos/mytheresa/64d538c3/jean-paul-gaultier-beige-X-Lotta-Volkova-Low-rise-Wool-Straight-Pants.jpeg",
+            brand: "Jean Paul Gaultier",
+            product_name: "Women's Natural X Lotta Volkova Low-rise Wool Straight Pants",
+            product_id: "women34",
+            category: "Pants",
+            price: 705,
+            price2: "🚚",
+        },
+        {
+            img:
+                "https://cdna.lystit.com/200/250/tr/photos/sachinandbabi/cc65aa2a/sachin-babi-SilverCharcoal-Simone-Gown.jpeg",
+            brand: "Sachin & Babi",
+            product_name: "Women's Gray Simone Gown",
+            product_id: "women35",
+            category: "Gown",
+            price: 795,
+            price2: "🚚",
+        },
+        {
+            img:
+                "https://cdna.lystit.com/200/250/tr/photos/nastygal/fb52678e/nasty-gal-designer-lime-Petite-Jacquard-Satin-Tie-Back-Mini-Dress.jpeg",
+            brand: "Nasty Gal",
+            product_name: "Women's Green Petite Jacquard Satin Tie Back Mini Dress",
+            product_id: "women36",
+            category: "Mini Dress",
+            price: 73,
+            price2: 51,
+        },
+        {
+            img:
+                "https://cdna.lystit.com/200/250/tr/photos/ssense/5fb5a500/jean-paul-gaultier-Multicolor-Ssense-Exclusive-Tulle-Long-Dress.jpeg",
+            brand: "Jean Paul Gaultier",
+            product_name: "Women's Black Ssense Exclusive Tulle Long Dress",
+            product_id: "women37",
+            category: "Dresses",
+            price: 800,
+            price2: "🚚",
+        },
+        {
+            img:
+                "https://cdna.lystit.com/200/250/tr/photos/nastygal/6daef09a/nasty-gal-designer-champagne-Satin-Ruffle-Detail-Strappy-Wrap-Maxi-Dress.jpeg",
+            brand: "Nasty Gal",
+            product_name: "Women's Natural Satin Ruffle Detail Strappy Wrap Maxi Dress",
+            product_id: "women38",
+            category: "Dresses",
+            price: 82,
+            price2: 57,
+        },
+        {
+            img:
+                "https://cdna.lystit.com/200/250/tr/photos/nastygal/577ec21a/nasty-gal-designer-black-Cropped-Strapless-Seam-Detail-Corset-Top.jpeg",
+            brand: "Nasty Gal",
+            product_name: "Women's Black Cropped Strapless Seam Detail Corset Top",
+            product_id: "women39",
+            category: "Top",
+            price: 67,
+            price2: 47,
+        },
+        {
+            img:
+                "https://cdna.lystit.com/200/250/tr/photos/nastygal/f9600c4f/nasty-gal-designer-purple-Satin-Angel-Sleeve-Tie-Side-Maxi-Dress.jpeg",
+            brand: "Nasty Gal",
+            product_name: "Women's Purple Satin Angel Sleeve Tie Side Maxi Dress",
+            product_id: "women40",
+            category: "Dresses",
+            price: 88,
+            price2: 68,
+        },
+        {
+            img:
+                "https://cdna.lystit.com/200/250/tr/photos/nastygal/ca6b4970/nasty-gal-designer-beige-Satin-Cowl-Maxi-Slip-Dress.jpeg",
+            brand: "Nasty Gal",
+            product_name: "Women's Natural Satin Cowl Maxi Slip Dress",
+            product_id: "women41",
+            category: "Dresses",
+            price: 82,
+            price2: 57,
+        },
+        {
+            img:
+                "https://cdna.lystit.com/200/250/tr/photos/selfridges/91a8b700/jean-paul-gaultier-Beige-Black-Nude-Mona-Lisa-Printed-Stretch-jersey-Mini-Dress.jpeg",
+            brand: "Jean Paul Gaultier",
+            product_name: "Women's Natural Mona Lisa Printed Stretch-jersey Mini Dress",
+            product_id: "women42",
+            category: "Mini Dress",
+            price: 395,
+            price2: "🚚",
+        },
+        {
+            img:
+                "https://cdna.lystit.com/200/250/tr/photos/nastygal/f9600c4f/nasty-gal-designer-purple-Satin-Angel-Sleeve-Tie-Side-Maxi-Dress.jpeg",
+            brand: "Nasty Gal",
+            product_name: "Women's Purple Satin Angel Sleeve Tie Side Maxi Dress",
+            product_id: "women43",
+            category: "Mini Dress",
+            price: 88,
+            price2: 62,
+        },
+        {
+            img:
+                "https://cdna.lystit.com/200/250/tr/photos/nastygal/f9600c4f/nasty-gal-designer-purple-Satin-Angel-Sleeve-Tie-Side-Maxi-Dress.jpeg",
+            brand: "Nasty Gal",
+            product_name: "Women's Purple Satin Angel Sleeve Tie Side Maxi Dress",
+            product_id: "women44",
+            category: "Mini Dress",
+            price: 88,
+            price2: 62,
+        },
+        {
+            img:
+                "https://cdna.lystit.com/200/250/tr/photos/sachinandbabi/f13dd662/sachin-babi-Ivory-Audra-Gown.jpeg",
+            brand: "Sachin & Babi",
+            product_name: "Women's White Audra Gown",
+            product_id: "women45",
+            category: "Gown",
+            price: 795,
+            price2: "🚚",
+        },
+        {
+            img:
+                "https://cdna.lystit.com/200/250/tr/photos/ssense/dada235a/jean-paul-gaultier-BlackRedGre-Multi-label-Turtleneck.jpeg",
+            brand: "Jean Paul Gaultier",
+            product_name: "Women's Black Multi-label Turtleneck",
+            product_id: "women46",
+            category: "Mini Dress",
+            price: 465,
+            price2: "🚚",
+        },
+        {
+            img:
+                "https://cdna.lystit.com/200/250/tr/photos/ssense/dada235a/jean-paul-gaultier-BlackRedGre-Multi-label-Turtleneck.jpeg",
+            brand: "Jean Paul Gaultier",
+            product_name: "Women's Black Multi-label Turtleneck",
+            product_id: "women47",
+            category: "Mini Dress",
+            price: 465,
+            price2: "🚚",
+        },
+        {
+            img:
+                "https://cdna.lystit.com/200/250/tr/photos/nastygal/2c5646e1/nasty-gal-designer-rose-V-Neck-Wrap-Satin-Maxi-Dress.jpeg",
+            brand: "Nasty Gal",
+            product_name: "Women's Pink Satin Long Sleeve Wrap Maxi Dress",
+            product_id: "women48",
+            category: "Dresses",
+            price: 73,
+            price2: 51,
+        },
+        {
+            img:
+                "https://cdna.lystit.com/200/250/tr/photos/nastygal/9c7500fe/nasty-gal-designer-multi-Floral-Print-Strapless-Mini-Dress.jpeg",
+            brand: "Nasty Gal",
+            product_name: "Women's Floral Print Strapless Mini Dress",
+            product_id: "women49",
+            category: "Mini Dress",
+            price: 47,
+            price2: 67,
+        },
+        {
+            img:
+                "https://cdna.lystit.com/200/250/tr/photos/ssense/35116aac/jean-paul-gaultier-Multicolor-Ssense-Exclusive-Tulle-Midi-Skirt.jpeg",
+            brand: "Jean Paul Gaultier",
+            product_name: "Women's Ssense Exclusive Tulle Midi Skirt",
+            product_id: "women50",
+            category: "Mini Dress",
+            price: 610,
+            price2: "🚚",
+        },
+    ]
+
+    let womenClothingLS = JSON.parse(localStorage.getItem("cartData")) || [];
+    let womendata = document.getElementById("box");
+
+
+    function displayProducts(womenClothing) {
+        womendata.innerHTML = "";
+        womenClothing.forEach(function (elem) {
+            let product = document.createElement("div");
+            let product1 = document.createElement("div");
+            let product2 = document.createElement("div");
+            let product3 = document.createElement("div");
+
+            let img = document.createElement("img");
+            img.src = elem.img;
+
+            let name = document.createElement("p")
+            name.innerText = elem.brand
+
+            let product_name = document.createElement("p")
+            product_name.innerText = elem.product_name
+
+            let price = document.createElement("h3")
+            price.innerText = "$" + elem.price
+
+            let btn = document.createElement("button")
+            btn.innerText = "Add To Cart"
+
+            product1.append(img)
+            product2.append(name, product_name, price)
+            product3.append(btn)
+            product.append(product1, product2, product3);
+            womendata.append(product)
+
+        })
+        localStorage.setItem("cartData",JSON.stringify(womenClothing))
+    }
+    displayProducts(womenClothing)
+
+
+    document.querySelector("#Category").addEventListener("change", function () {
+        let val = document.querySelector("#Category").value;
+        if (val == "All") {
+            displayProducts(womenClothing);
+        }
+        else {
+            let filtered = womenClothing.filter(function (elem) {
+                return elem.category == val;
+            })
+            displayProducts(filtered);
+        }
+    })
+    document.querySelector("#Brand").addEventListener("change", function () {
+        let val = document.querySelector("#Brand").value;
+        if (val == "All") {
+            displayProducts(womenClothing);
+        }
+        else {
+            let filtered = womenClothing.filter(function (elem) {
+                return elem.brand == val;
+            })
+            displayProducts(filtered);
+        }
+    })
+    document.querySelector("#SortPrice").addEventListener("change", function () {
+        let val = document.querySelector("#SortPrice").value;
+        if (val == "Ascending") {
+            womenClothing.sort(function (a, b) {
+                if (a.price < b.price) return -1
+                if (a.price > b.price) return 1
+                return 0;
+            })
+            displayProducts(womenClothing);;
+        }
+        else if (val == "Descending") {
+            womenClothing.sort(function (a, b) {
+                if (a.price < b.price) return 1
+                if (a.price > b.price) return -1
+                return 0;
+            })
+            displayProducts(womenClothing);;
+        }
+    })
+
+    
+</script>
