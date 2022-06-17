@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         /* navbar styling start */
+   /* navbar */
+   * {
+  margin: 0px;
+  padding: 0px;
+/*   
+  box-sizing: inherit; */
+}
+body {
+  width: 100%;
+  
+}
+
+#navbar {
+  border-bottom: 1px solid black;
+  height: 80px;
+  padding: 1%;
+  width: 98%;
+  background-color: #fff;
+  z-index: 2;
+}
+#navbar div:nth-child(1) {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 12px;
+  font-weight: bold;
+}
+#navbar div:nth-child(2) {
+  margin-top: 1%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#help {
+  cursor: pointer;
+}
+#navbar div:nth-child(1) img {
+  width: 9px;
+}
+#logo {
+  width: 8%;
+  height: 9%;
+  margin-left: 1%;
+}
+#navbar div:nth-child(1) p:last-child {
+  background-color: black;
+  color: white;
+}
+#navbar div:nth-child(1) p a {
+  text-decoration: none;
+  color: black;
+}
+#navbar div:nth-child(1) p:last-child a {
+  color: white;
+}
+#search {
+  width: 70%;
+  background: url(https://icons.veryicon.com/png/o/application/wq/search-171.png);
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: 1%;
+  padding: 1% 4% 1% 4%;
+  font-weight: bold;
+  border: 1px solid;
+  font-size: 16px;
+}
+input::placeholder {
+  color: rgb(170, 170, 170);
+  font-weight: 1px;
+}
+#navbar div:nth-child(1) p {
+  margin-left: 1%;
+  text-align: center;
+  padding: 5px 10px 3px 10px;
+}
+.option {
+  font-weight: bold;
+  margin-right: 2%;
+  margin-top: 1%;
+  margin-left: 1%;
+}
+.option a {
+  color: #626262;
+  text-decoration: none;
+}
+.header {
+  position: fixed;
+  transition: transform 400ms cubic-bezier(0.25, 0.37, 0.17, 0.96);
+} /* When header is not in viewport we hide it */
+.header[data-scroll="out"] {
+  transform: translatey(-100%);
+} /* When moving up and header we show it */
+[data-scroll-dir-y="-1"] .header {
+  transform: translatey(0);
+}
+#search_icon,
+#person_icon,
+#close_search {
+  display: none;
+}
+.helplist {
+  display: grid;
+  grid-template-columns: repeat(1, 160px);
+  grid-template-rows: repeat(4, auto);
+  /* display:none; */
+  width: 160px;
+  height: 160px;
+  position: fixed;
+  right: 10%;
+  justify-content: center;
+  top: 45px;
+  display: none;
+  background-color: white;
+  font-size: 12px;
+  line-height: 40px;
+  padding: 2% 1% 2% 1%;
+  box-shadow: 0 0 5px rgb(0 0 0 / 35%);
+}
+.helplist a {
+  text-decoration: none;
+  color: black;
+}
+.helplist:before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  position: absolute;
+  top: -8px;
+  right: 15px;
+  transform: translateX(-50%) rotate(225deg);
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+#country{
+  cursor: pointer;
+}
+
+#set_country{
+  width: 400px;
+  height: 200px;
+  position:absolute;
+  visibility: hidden;
+ display:none;
+  right: 35%;
+  top: 43px;
+  background-color: white;
+  font-size: 12px;
+  line-height: 40px;
+  box-shadow: 0 0 5px rgb(0 0 0 / 35%);
+  /* display:flex;
+  justify-content:center;
+  align-items: center; */
+  padding:1%;
+}
+#set_country h2{
+  text-align: center;
+  font-size: 23px;
+  margin-top:-30px;
+}
+#set_country select{
+  width:83%;
+  height:15%;
+  margin-left:5%;  
+  font-size:15px;
+  padding:1% 2% 1% 2%;
+  font-weight: 300px;
+  border:2px solid #e0e1e7;
+  background-color:transparent;
+}
+#set_country > button{
+  width:116px;
+  height:44px;
+  font-weight: 600;
+  color:white;
+  background-color:black;
+  border:none;
+  font-size: 15px;
+  margin-left:32%;
+  margin-top: 3%;
+  }
+  /* media................................. */
+  
+@media all and (min-width: 200px) and (max-width: 902px) {
+  #navbar {
+    width: 100%;
+    height: 40px;
+  }
+  #navbar div:nth-child(1) {
+    display: none;
+    margin: 0px;
+  }
+  .option {
+    display: none;
+    position: absolute;
+    right: 0px;
+    width: 1px;
+  }
+  #search {
+    display: none;
+    width: 83%;
+    position: absolute;
+    top: 60%;
+    left: 1%;
+  }
+  #close_search {
+    display: none;
+    position: relative;
+    left: -10px;
+    top: 40px;
+  }
+  #person_icon {
+    position: relative;
+    right: -30px;
+  }
+  #logo {
+    width: 13%;
+
+    margin: auto;
+    margin-bottom: 1%;
+  }
+
+  #navbar div:nth-child(2) {
+    display: flex;
+  }
+  #search_icon {
+    display: block;
+    position: relative;
+    left: 8%;
+    font-size: 25px;
+  }
+
+  #person_icon {
+    display: block;
+  }
+
+  #menu_icon {
+    overflow: visible;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    top: 1px;
+    right: 95%;
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: repeat(1, auto);
+  }
+
+  .line2,
+  .line3,
+  .line4 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 2px 0;
+    transition: 0.4s;
+  }
+  .change .line2 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  .change .line4 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+  .change .line3 {
+    opacity: 0;
+  }
+}
+#logo:hover
+{
+  cursor: pointer;
+}
+/* navbar style ends */
+      *{
+         margin: 0px;
+         padding: 0px;
+         box-sizing: border-box;
+         font-family: Suisse Intl,Helvetica Neue,Helvetica,Arial,sans-serif;
+     }
+     #container{
+         display: grid;
+         grid-template-columns: repeat(6,1fr);
+         grid-template-rows: auto;
+         gap: 10px 20px;
+         box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+         font-size: small;
+     }
+     #container>div{
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        align-self: stretch ;
+        align-self: end;
+
+     }
+     #container>div>button{
+        width: 13%;
+        padding: 3%;
+        text-align: center;
+        border: transparent;
+        border-radius: 6px;
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+     }
+     
+#container > div > button:nth-child(7) {
+    width: 40%;
+   color: white;
+   font-weight: bold;
+}
+#container > div > h2:nth-child(2){
+    color: rgb(37, 52, 52);
+}
+     #container>div>img{
+         width: 40%;
+     }
+     #payment
+     {  width: 30%;
+        font-size: xx-large;
+        text-align: center;
+        margin: auto;
+        background-color:  darkslategray;
+        border-radius: 15px;
+     }
+     .heading{
+        display: flex;
+        
+        justify-content: space-between;
+     }
+     .continue {
+         
+         text-decoration: none;
+       padding: 10px;
+         border: #1c2838 1px solid;
+      
+         background-color: black;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    
+    
+       
+     }
+    /* button */
+    .continue:hover {
+    background-color: white;
+    color: black;
+}
+
+/* button */
+.subtotal{
+    text-align: end;
+  margin: auto;
+
+}
+ </style>
+</head>
+<body>
+    <!-- navbar -->
+    <div id="navbar" class="header" data-scroll>
+        
+        <div>
+        <p id="country"> CN-US$</p>
+            <div id="set_country">
+            <i class="material-icons" style="font-size: 30px ; margin-left:90%; background-color: #f5f4f2; border-radius:50%" id="close_display">close</i>
+            <h2>Set your country</h2>
+            
+            <select id="country">
+                <option>Select Country</option>
+            </select>
+            <button>Set Country</button>
+        
+        
+            </div>
+            <p id="help">Help</p>
+            <div  class="helplist arrow-top">
+            <span class="close"></span>
+            <a href="#">Help Center</a>
+            <hr color="black" />
+            <a href="#">Contact us</a>
+                <hr color="black" />
+            <a href="#">About us</a>
+            <hr color="black" />
+            <a href="#">Careers</a>
+            <hr color="black" />
+            </div>
+            <p><a href=signin.html">Sign in</a></p>
+            <p><a href=signup.html">Join</a></p>
+            
+        </div>
+        
+        <div>
+        <i class="material-icons" id="search_icon">search</i>
+        <img  alt="Lyst" id="logo" src="https://static.lystit.com/static/n/pr_campaigns/year_in_fashion_2020/images/logo.a9c5dfdd1a8b.png"/>
+        <i class="material-icons" id="person_icon" style="font-size:36px;">person_outline</i>
+            <div id="menu_icon" onclick="redirect(this)">
+            <div class="line1 "></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+            <div class="line4"></div>
+        
+        </div>
+        
+        
+        <i class="material-icons" style="font-size: 36px" id="close_search">close</i>
+        </div>
+        
+    </div>
+    
+    <!-- navbar -->
+    <br><br><br><br><br><br><br>
+            <div class="wrap cf">
+                
+                <div class="heading cf">
+                  <h1>My Cart 🛒</h1> <a href="#" class="continue">Continue Shopping ➤</a>
+                </div>
+           </div>
+    <div id="container"></div>
+   
+        
+        <div class="subtotal cf">
+          <ul>
+           
+                  <li class="totalRow final"><span class="label"><strong>Total 🛒: </strong></span><span class="value"></span>$</li>
+                  <br>
+                  <a href="payment.html" class="subtotal continue">GO TO SECURE CHECKOUT ➤</a>
+          </ul>
+        </div>
+        <br><br>
+        
+    <!-- <div id="payment"><a href="payment.html">Proceed with the payment</a></div> -->
+</body>
+</html>
+<script>
+   let containerCont =  document.getElementById('container');
+     let cartData = JSON.parse(localStorage.getItem('cartData')) || [] ;
+    
+
+     let cost_value = document.querySelector('.value')
+     let form = document.querySelector('form')
+     
+      let cost = 0;
+      let cart_cost = JSON.parse(localStorage.getItem('cartCost')) || {'cost':cost};
+     function displaycontainer(cartData)
+  {  containerCont.innerHTML = ''
+
+    cartData.forEach(function(elem,index)
+  {
+    let box = document.createElement('div');
+      let avatar = document.createElement('img');
+      avatar.setAttribute('src',elem.image_url)
+     
+      let name = document.createElement('h2')
+      name.innerText= elem.name
+      let price = document.createElement('h2')
+      price.innerText = elem.price + '$'
+    
+      cost += (Number(elem.price) * Number(elem.quant));
+      
+cost_value.innerText = cost;
+      let deleteItem = document.createElement('button')
+      deleteItem.innerText = 'Delete'
+      deleteItem.style.backgroundColor = 'red';
+      deleteItem.addEventListener('click',function(){
+           Delete(elem,index)
+           event.target.parentNode.remove();
+        })
+        let quant = document.createElement('p');
+      
+    let dec = document.createElement('button');
+        dec.innerText = '-';
+        dec.addEventListener('click',function(){
+            if(elem.quant>1)
+            {
+                elem.quant -= 1;
+                quant.innerText = elem.quant 
+                cost -= +(elem.price);
+                
+                cost_value.innerText = cost;
+
+                updateQuant(elem,index);
+            }
+        
+        })
+     let inc = document.createElement('button');
+        
+        quant.innerText = elem.quant 
+        inc.innerText = '+';
+        inc.addEventListener('click',function(){
+            elem.quant += 1;
+            quant.innerText = elem.quant 
+            cost += +(elem.price);
+            
+cost_value.innerText = cost;
+            updateQuant(elem,index);
+        })
+      
+      box.append(avatar,name,price,quant,inc,dec,deleteItem)
+     
+
+      document.querySelector('#container').append(box)
+        
+  })
+  cart_cost.cost = cost;
+    console.log(cart_cost);
+    localStorage.setItem('cartCost',JSON.stringify(cart_cost));
+}
+  displaycontainer(cartData)
+  
+function updateQuant () {
+    localStorage.setItem('cartData',JSON.stringify(cartData));
+    cart_cost.cost = cost;
+    localStorage.setItem('cartCost',JSON.stringify(cart_cost));
+}
+
+function Delete(elem,index) {
+ 
+    cartData = cartData.filter(function(elem) {
+        return elem.name != elem.name;
+    })
+    cost -= (elem.price * elem.quant);
+    
+    cost_value.innerText = cost;
+
+    
+    cart_cost.cost = cost;
+    localStorage.setItem('cartCost',JSON.stringify(cart_cost));
+
+    localStorage.setItem('cartData',JSON.stringify(cartData));
+    cartData = JSON.parse(localStorage.getItem('cartData'));
+    console.log(cartData);
+   
+}
+
+      </script>
