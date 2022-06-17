@@ -56,7 +56,7 @@
         }
         #bigbox>div:first-child{
             width: 100%;
-            height: 1%;
+            height: 70px;
             display: flex;
             justify-content: end;
             align-items: center;
@@ -77,7 +77,7 @@
     </select>
     <hr>
     <select name="Category" id="Category">
-        <option>Catagory</option>
+        <option value="All">Catagory</option>
         <option value="Belts">Belts</option>
         <option value="Phone cases">Phone cases</option>
         <option value="Face masks">Face masks</option>
@@ -86,11 +86,11 @@
     </select>
     <hr>
     <select name="Brand" id="Brand">
-        <option>Select Brand</option>
-        <option value="PRADA">PRADA</option>
+        <option value="All">Select Brand</option>
+        <option value="DOLCE & GABBANA">DOLCE & GABBANA</option>
         <option value="GUCCI">GUCCI</option>
-        <option value="BOTTEGA VENETA">BOTTEGA VENETA</option>
-        <option value="BALENCIAGA">BALENCIAGA</option>
+        <option value="OFF-WHITE C/O VIRGIL ABLOH">OFF-WHITE C/O VIRGIL ABLOH</option>
+        <option value="MOSCHINO">MOSCHINO</option>
        <option value="HUNTER">HUNTER</option>
        <option value="COACH">COACH</option>
        <option value="DIOR">DIOR</option>
@@ -148,8 +148,8 @@
 <div>
     <select name="Sort by recomended" id="pricesort">
         <option value="Sort by recomended">Sort by recomended</option>
-        <option value="Sort by Price(High to Low)">Sort by Price(High to Low)</option>
-        <option value="Sort by Price(Low to High)">Sort by Price(Low to High)</option>
+        <option value="descending">Sort by Price(High to Low)</option>
+        <option value="ascending">Sort by Price(Low to High)</option>
     </select>
 </div>
 <div id="products"></div>
@@ -158,7 +158,7 @@
    </div> 
 </body>
 </html>
-<script>
+<script> 
     wadata=[
     { product_id :"wa1",
     price : 440,
@@ -168,7 +168,7 @@
     { product_id :"wa2",
     price : 392,
     category : "Belts",
-    brand : "SAINT LAURENT",
+    brand : "DOLCE & GABBANA",
     img : "https://cdna.lystit.com/200/250/tr/photos/mytheresa/12de5d02/saint-laurent-black-Cintura-Monogram-in-pelle.jpeg" },
     { product_id :"wa3",
     price : 399,
@@ -379,7 +379,7 @@
     { product_id :"wa44",
     price : 550,
     category : "Hats",
-    brand : "PRADA",
+    brand : "MOSCHINO",
     img : "https://cdna.lystit.com/200/250/tr/photos/lncc/53e90f92/prada-Black-Logo-Bucket-Hat.jpeg" },
     { product_id :"wa45",
     price : 134,
@@ -412,21 +412,70 @@
     brand : "BURBERRY",
     img : "https://cdna.lystit.com/200/250/tr/photos/mytheresa/14608f70/burberry-black-Cappello-da-pescatore-con-logo.jpeg" }
     ];
-    for(i=0;i<wadata.length;i++){
-        let smallbox=document.createElement("div");
-        let image=document.createElement("img");
-        let id=document.createElement("h4");
-        let brand=document.createElement("h3");
-        let category=document.createElement("h4");
-        let price=document.createElement("p");
-        let btn=document.createElement("button");
-        image.setAttribute("src",wadata[i].img);
-        id.innerText=wadata[i].product_id;
-        brand.innerText=wadata[i].brand;
-        category.innerText=wadata[i].category;
-        price.innerText="$"+wadata[i].price;
-        btn.innerText="Add to Cart";
-        smallbox.append(image,brand,id,category,price,btn);
-        document.querySelector("#products").append(smallbox);
+    display(wadata);
+    function display(wadata){
+        document.querySelector("#products").innerHTML="";        
+            wadata.forEach(function(elem){
+            let smallbox=document.createElement("div");
+            let image=document.createElement("img");
+            let id=document.createElement("h4");
+            let brand=document.createElement("h3");
+            let category=document.createElement("h4");
+            let price=document.createElement("p");
+            let btn=document.createElement("button");
+            image.setAttribute("src",elem.img);
+            id.innerText=elem.product_id;
+            brand.innerText=elem.brand;
+            category.innerText=elem.category;
+            price.innerText="$"+elem.price;
+            btn.innerText="Add to Cart";
+            smallbox.append(image,brand,id,category,price,btn);
+            document.querySelector("#products").append(smallbox);
+        })
     }
+    
+document.querySelector("#Category").addEventListener("change",function(){
+let val=document.querySelector("#Category").value;
+if(val=="All"){
+display(wadata);
+}
+else{
+    let filtered=wadata.filter(function(elem){
+        return  elem.category==val;
+    })
+    display(filtered);
+}
+})
+document.querySelector("#Brand").addEventListener("change",function(){
+    let val=document.querySelector("#Brand").value;
+    if(val=="All"){
+    display(wadata);
+    }
+    else{
+        let filtered=wadata.filter(function(elem){
+            return  elem.brand==val;
+        })
+        display(filtered);
+    }
+    })
+
+document.querySelector("#pricesort").addEventListener("change",function(){
+    let val=document.querySelector("#pricesort").value;
+    if(val=="ascending"){
+        wadata.sort(function(a,b){
+          if(a.price<b.price) return -1
+          if(a.price>b.price) return 1
+          return 0;
+          })
+        display(wadata);
+      }
+      else if(val=="descending"){
+        wadata.sort(function(a,b){
+          if(a.price<b.price) return 1
+          if(a.price>b.price) return -1
+          return 0;
+          })
+          display(wadata);
+      }
+})
 </script>
