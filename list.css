@@ -1,0 +1,149 @@
+* {
+  margin: 0px;
+  padding: 0px;
+
+  box-sizing: inherit;
+}
+body {
+  width: 100%;
+  font-family: Suisse Intl,Helvetica Neue,Helvetica,Arial,sans-serif;
+ 
+}
+body a{
+text-decoration: none;
+color:black;
+
+}
+
+
+#products {
+font-size:15px;
+-webkit-font-smoothing:antialiased;
+  width: 60%;
+  padding-top: 118px;
+  padding-bottom: 10px;
+  background-color: white;
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+ul{
+    list-style: none;
+
+}
+ul li a{
+    font-size:15px;
+    line-height:33px;
+    -webkit-font-smoothing:antialiased;
+    color:black;
+}
+#display {
+width:200px;    
+position:absolute;
+
+padding:1% 3% 1% 1%;
+left:1%;
+top:25%;
+z-index: -1;
+border-right:1px solid; 
+min-height:100%;
+  }
+.clothing{
+  
+    display:block;
+}
+.shoes{
+    display:none;
+}
+.accessories{
+    display:none;
+}
+.bags{
+    display:none;
+}
+.jewelry{
+    display:none;
+}
+.brands{
+    display:none;
+}
+#close_womens_page{
+  position:absolute;
+  left:510%;
+  color:rgb(94, 94, 94);
+  background-color:rgba(211, 211, 211, 0.233);
+  border-radius:50%;
+}
+#dummy{
+  display:none;
+}
+#arr1,#arr2,#arr3,#arr5,#arr6,#arr4{
+ display:none;
+
+}
+@media all and (min-width: 200px) and (max-width: 902px) {
+
+
+#display{
+
+    display: none;
+}
+
+.clothing{
+  display:none;
+}
+.shoes{
+    display:none;
+}
+.accessories{
+    display:none;
+}
+.bags{
+    display:none;
+}
+.jewelry{
+    display:none;
+}
+.brands{
+
+    display:none;
+}
+
+#products{
+  padding-top:60px;
+  width:100%;
+  display:grid;
+  grid-template-columns: repeat(1, 1fr);
+
+
+}
+#dummy{
+  display:inline-block;
+
+}
+#products > div{
+  border-bottom: 1px solid;
+  padding:1% 1% 3% 1%;
+}
+
+hr{
+  display:none;
+}
+#arr1,#arr2,#arr3,#arr5,#arr6,#arr4{
+ display:block;
+ position:absolute;
+ left:95%;
+ 
+
+}
+#w1{
+  position:absolute;
+  left:15%;
+}
+#w2{
+  position:absolute;
+  left:28%;
+}
+
+}

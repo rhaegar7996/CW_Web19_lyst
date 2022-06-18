@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your World of Fashion | Lyst</title>
+    <!-- add icon on title link -->
+    <link rel = "icon" href ="https://www.lyst.com/favicon.ico" type = "image/x-icon">
+    <!-- add navbarcss -->
+    
+    <!-- External link for nav bar -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700">
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+    <!-- end External link for nav bar -->
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <!-- font link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    
+</head>
+<body>
+<div class="container">
+    <!-- div for nav bar -->
+    <div id="navbar" class="header" data-scroll>
+        
+        <div>
+        <p id="country"> CN-US$</p>
+            <div id="set_country">
+            <i class="material-icons" style="font-size: 30px ; margin-left:90%; background-color: #f5f4f2; border-radius:50%" id="close_display">close</i>
+            <h2>Set your country</h2>
+            
+            <select id="country">
+                <option>Select Country</option>
+            </select>
+            <button>Set Country</button>
+        
+        
+            </div>
+            <p id="help">Help</p>
+            <div  class="helplist arrow-top">
+            <span class="close"></span>
+            <a href="#">Help Center</a>
+            <hr color="black" />
+            <a href="#">Contact us</a>
+                <hr color="black" />
+            <a href="#">About us</a>
+            <hr color="black" />
+            <a href="#">Careers</a>
+            <hr color="black" />
+            </div>
+            <p><a href=signin.html">Sign in</a></p>
+            <p><a href=signup.html">Join</a></p>
+            
+        </div>
+        
+        <div>
+        <i class="material-icons" id="search_icon">search</i>
+        <img  alt="Lyst" id="logo" src="https://static.lystit.com/static/n/pr_campaigns/year_in_fashion_2020/images/logo.a9c5dfdd1a8b.png"/>
+        <i class="material-icons" id="person_icon" style="font-size:36px;">person_outline</i>
+            <div id="menu_icon" onclick="redirect(this)">
+            <div class="line1 "></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+            <div class="line4"></div>
+        
+        </div>
+        <p class="option"><a href="womenslist.html">WOMEN</a></p>
+        <p class="option"><a href="menslist.html">MEN</a></p>
+        <input id="search" type="search" placeholder='SEARCH (E.G."ACNE JEANS")' icon="search"/>
+        <i class="material-icons" style="font-size: 36px" id="close_search">close</i>
+        </div>
+    </div>
+        <!--  nav bar end -->
+        <!-- write your owan code below -->
+        
+<!-- first imge -->
+        <div>
+            <img id="main_image" src="https://cdna.lystit.com/cms/ENG_header_XL_9f9e2af236_615828663f.jpg" alt="The definitive fashion shoping app">
+            <img  id="alternate" src="https://cdna.lystit.com/cms/ENG_header_mobile_test_a391a0431f.jpg" alt="">
+            <img id="secondalt"src="https://cdna.lystit.com/cms/ENG_header_tablet_test_40933dc911.jpg" alt="">
+        </div>
+        <!-- ad images -->
+        <div id="adimage" class="adimages">
+            <img src="https://drive.google.com/uc?export=view&id=1ZSrK2EbNAhVHDOwAfLbivZe_G_zpJf8s" alt="ad for application">
+        </div>
+        <!-- end ad image -->
+
+        <!-- second part -->
+        <div id="second">
+            <div class="h"></div>
+            <div class="scroll ">
+                <a href="#">
+                    <p>Crisp Monochrome</p>
+                    <img src="https://cdna.lystit.com/cms/Image_from_i_OS_570_8c4ba5ce61.png" alt="">
+                </a>
+                <a href="#">
+                <p>One Step Ahead</p>
+                <img src="https://cdna.lystit.com/cms/OSA_24_03_22_09a1fa2732.jpeg" alt="">
+                </a>
+                <a href="#">
+                <p>REFINED GLAMOUR</p>
+                <img src="https://cdna.lystit.com/cms/REFINED_GLAMOUR_c966d97813.jpeg" alt="">
+                </a>
+                <a href="#">
+                <p>NEW CLASSICS</p>
+                <img src="https://cdna.lystit.com/cms/NEW_CLASSICS_f5f19784b9.jpeg" alt="">
+                </a>
+                <a href="#">
+                <p>30 UNDER 300</p>
+                <img src="https://cdna.lystit.com/cms/17537008_38224404_800_7b2d22a8aa.png" alt="">
+                </a>
+            </div>
+            <div class="h"></div>
+            <div class="scroll">
+                <a href="#">
+                        <p>Shop the sale - uo to 60% off on 24s</p>
+                        <img src="https://cdna.lystit.com/cms/UK_US_DE_065c7e8506.png" alt="">
+                </a>
+                <a href="#">
+                    <p>Isto.-Luxury Zssentils For Men. 100% organic</p>
+                    <img src="https://cdna.lystit.com/cms/ISTO_Lyst_03_4b0bae6b23.jpg" alt="">
+                </a>
+                <a href="#">
+                    <p>Demy by Demylee bold, Bright, + Anything but Basic</p>
+                    <img src="https://cdna.lystit.com/cms/DEMY_BY_DEMYLEE_LYST_21f6f7e27f.jpg" alt="">
+                </a>
+                <a href="#">
+                    <p>Shop my beachy side-hand crochet resortwear</p>
+                    <img src="https://cdna.lystit.com/cms/11bk_RS_Do_e3e888eb52.jpeg" alt="">
+                </a>
+                <a href="#">
+                    <p>Shop the Jaunt-Designer favs up to 70% off</p>
+                    <img src="https://cdna.lystit.com/cms/The_Jaunt_600x600_Lyst_bbf0bd8c54.png" alt="">
+                </a>
+                
+            </div>
+            <div class="h"></div>
+        </div>
+        <!-- second part end -->
+
+        <!-- now start third part -->
+        <div id="third">
+        
+            <div class="scroll2">
+                <a href="#"  class="resizeCursor">
+                    <p class="font">BREAKOUT BRANDS</p>
+                    
+                </a>
+                <a href="#">
+                    <p>patou</p>
+                    <img src="https://cdna.lystit.com/cms/My_Post_81_76121ffa01.jpg" alt="">
+                </a>
+                <a href="#">
+                    <p>gucci</p>
+                    <img src="https://cdna.lystit.com/cms/designer_rail_gucci_eca9e74796.jpg" alt="">
+                </a>
+                <a href="#">
+                    <p>saint laurent</p>
+                    <img src="https://cdna.lystit.com/cms/designer_rail_saint_laurent_2031eb80f7.jpeg" alt="">
+                </a>
+                <a href="#">
+                    <p>off-white c/o virgil abloh</p>
+                    <img src="https://cdna.lystit.com/cms/designer_rail_off_white_co_virgil_abloh_d8c6b37a9f.jpeg" alt="">
+                </a>
+                <a href="#">
+                    <p>balenciaga</p>
+                    <img src="https://cdna.lystit.com/cms/designer_rail_balenciaga_215cbc0fe0.jpeg" alt="">
+                </a>
+                <a href="#">
+                    <p>Nike</p>
+                    <img src="https://cdna.lystit.com/cms/designer_rail_nike_c3045162ba.png" alt="">
+                </a>
+                <a href="#">
+                    <p>dolce & gabbana</p>
+                    <img src="https://cdna.lystit.com/cms/designer_rail_dolce_gabbana_bcb7049bb0.jpeg" alt="">
+                </a>
+                <a href="#">
+                    <p>moncler</p>
+                    <img src="https://cdna.lystit.com/cms/designer_rail_moncler_bcdcdc131d.jpeg" alt="">
+                </a>
+                <a href="#">
+                    <p>valentino</p>
+                    <img src="https://cdna.lystit.com/cms/designer_rail_valentino_421c18fab0.jpeg" alt="">
+                </a>
+
+            </div>
+            <div class="scroll22">
+                <a href="#">
+                    <p>eton shirts</p>
+                    <img src="https://cdna.lystit.com/cms/eton_sweden_shirt_da4fff6982.jpg" alt="">
+                </a>
+                <a href="#">
+                    <p>galvan london dresses</p>
+                    <img src="https://cdna.lystit.com/cms/galvan_dress_cb31d2b319.jpg" alt="">
+                </a>
+                <a href="#"  class="resizeCursor">
+                    <p class="font">trending now</p>
+                    
+                </a>
+                <a href="#">
+                    <p>roberta roller rabbit nightwear and seleepwear</p>
+                    <img src="https://cdna.lystit.com/cms/roberta_roller_rabbit_480eb63ae6.jpg" alt="">
+                </a>
+                <a href="#">
+                    <p>rhude t-shirts</p>
+                    <img src="https://cdna.lystit.com/cms/rhude_shirt_c6bc886e07.jpg" alt="">
+                </a>
+                <a href="#">
+                    <p>a bathing ape jackets</p>
+                    <img src="https://cdna.lystit.com/cms/a_bathing_ape_jacket_c40f13e02f.jpg" alt="">
+                </a>
+                <a href="#">
+                    <p>johnny was beachwear and swimwear outfits</p>
+                    <img src="https://cdna.lystit.com/cms/johnny_was_beachwear_812a36ae2c.jpg" alt="">
+                </a>
+                <a href="#">
+                    <p>casablanca t-shirts</p>
+                    <img src="https://cdna.lystit.com/cms/casablanca_shirt_b83fb98040.jpg" alt="">
+                </a>
+
+            </div>
+            <div class="scroll22">
+                <a href="#">
+                    <p>bonobos shorts</p>
+                    <img src="https://cdna.lystit.com/cms/bonobos_shorts_6a3e83ea91.jpg" alt="">
+                </a>
+                <a href="#" class="resizeCursor">
+                    <p class="font">hot right now</p>
+                </a>
+                <a href="#">
+                    <p>balenciaga beachwear and swimwear outfits</p>
+                    <img src="https://cdna.lystit.com/cms/balenciaga_swimwear_a06622c701.jpg" alt="">
+                </a>
+                <a href="#">
+                    <p>pandora bracelets</p>
+                    <img src="https://cdna.lystit.com/cms/pandora_bracelets_1e97a9f038.jpg" alt="">
+                </a>
+                <a href="#">
+                    <p>lanvin t-shirts</p>
+                    <img src="https://cdna.lystit.com/cms/lanvin_shirt_8ae9c5a0a3.jpg" alt="">
+                </a>
+                <a href="#">
+                    <p>maison mihara yasuhiro sneakers</p>
+                    <img src="https://cdna.lystit.com/cms/maison_mihara_shoes_4f566934fb.jpg" alt="">
+                </a>
+                <a href="#">
+                    <p>chimi sunglasses</p>
+                    <img src="https://cdna.lystit.com/cms/chimi_sunglasses_1629b146e4.jpg" alt="">
+                </a>
+                <a href="#">
+                    <p>bonobos pants, slacks and chinos</p>
+                    <img src="https://cdna.lystit.com/cms/bonobos_pants_ff66673693.jpg" alt="">
+                </a>
+                
+            </div>
+        </div>
+        <!-- End third part -->
+        <!-- start fourth part -->
+        <div id="four">
+            <div class="grid">
+                <div>
+                    <p>1</p>
+                    <p>THE BIGGEST SELECTION</p>
+                    <p>Shop over 12,000 brands and stores in one place.</p>
+                    <p>Find exactly what you want with powerful search and personal recommendations.</p>
+                </div>
+                <div>
+                    <p>2</p>
+                    <p>THE HOTTEST PRODUCTS</p>
+                    <p>See what’s new and what’s trending.</p>
+                    <p>Hit the heart to receive alerts on the latest drops from your favourite brands.</p>
+                </div>
+                <div>
+                    <p>3</p>
+                    <p>THE BEST PRICES</p>
+                    <p>Compare prices and shipping options across thousands of stores.</p>
+                    <p>Lyst members are notified when an item goes on sale.</p>
+                </div>
+            </div>
+            <div>
+                <a href="#">
+                    <div id="join">
+                        <div>SIGN UP FOR SMARTER SHOPPING</div>
+                        <P>Join →</P>
+                    </div>
+                </a>
+                <div></div>
+            </div>
+        </div>
+        <!-- end fourth part -->
+        <!-- start 5th part -->
+        <div id="five">
+            <div>most wanted</div>
+            <div>
+                <div class="fiveGrid">
+                    <a href="#">birkenstock papillio sandals</a>
+                    <a href="#">draped blouses</a>
+                    <a href="#">sculptural heels</a>
+                    <a href="#">tory burch miller sandals</a>
+                    <a href="#">sheer mesh bras</a>
+                </div>
+                <div class="fiveGrid">
+                    <a href="#">nike sb dunk low sneakers</a>
+                    <a href="#">plaid pants</a>
+                    <a href="#">reebok instapump sneakers</a>
+                    <a href="#">pinstripe suits</a>
+                    <a href="#">veja v12 sneakers</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- end fiveth part -->
+        <!-- start sixth part -->
+        <div id="six">
+            <div>
+                <a  href="#">WOMEN'S CLOTHING</a>
+                <div>
+                    <a href="#">Skirts</a>
+                    <a href="#">Hosiery</a>
+                    <a href="#">Coats</a>
+                    <a href="#">Jeans</a>
+                    <a href="#">Jumpusuits and rompers</a>
+                    <a href="#">Nightwear and sleepwear</a>
+                    <a href="#">Pants, Slacks and Chinos</a>
+                    <a href="#">Jackets</a>
+                    <a href="#">Suits Tops</a>
+                    <a href="#">beachwear and swimwear outfits</a>
+                    <a href="#">Dresses</a>
+                    <a href="#">Activewear, gym and workout clothes</a>
+                    <a href="#">Shorts</a>
+                    <a href="#">Lingerie</a>
+                    <a href="#">Sweaters and knitwear</a>
+                </div>
+            </div>
+            <div>
+                <a  href="#">MEN'S CLOTHING</a>
+                <div>
+                    <a href="#">Shirts</a>
+                    <a href="#">Coats</a>
+                    <a href="#">Jeans</a>
+                    <a href="#">Nightwear and sleepwear</a>
+                    <a href="#">Pants, Slacks and Chinos</a>
+                    <a href="#">Jackets</a>
+                    <a href="#">Suits</a>
+                    <a href="#">Underwear</a>
+                    <a href="#">Beachwear</a>
+                    <a href="#">Shorts</a>
+                    <a href="#">Activewear, gym and workout clothes</a>
+                    <a href="#">T-shirts</a>
+                    <a href="#">Sweaters and knitwear</a>
+                </div>
+            </div>
+            <div>
+                <a  href="#">WOMEN'S SHOES</a>
+                <div>
+                    <a href="#">Heels</a>
+                    <a href="#">Sneakers</a>
+                    <a href="#">Flats and flat shoes</a>
+                    <a href="#">Boots</a>
+                </div>
+            </div>
+            <div>
+                <a  href="#">MEN'S SHOES</a>
+                <div>
+                    <a href="#">Lace-ups</a>
+                    <a href="#">Slip-on shoes</a>
+                    <a href="#">Sandals, slides and flip flops</a>
+                    <a href="#">Boots</a>
+                    <a href="#">Sneakers</a>
+                </div>
+            </div>
+            <div>
+                <a  href="#">WOMEN'S ACCESSORIES</a>
+                <div>
+                    <a href="#">Scarves and mufflers</a>
+                    <a href="#">Wallets and cardholders</a>
+                    <a href="#">Sunglasses</a>
+                    <a href="#">Watches</a>
+                    <a href="#">Umbrellas</a>
+                    <a href="#">Belts</a>
+                    <a href="#">Face masks</a>
+                    <a href="#">Headbands, hair clips and hair accessories</a>
+                    <a href="#">Phone cases</a>
+                    <a href="#">Hats</a>
+                    <a href="#">Gloves</a>
+                </div>
+            </div>
+            <div>
+                <a  href="#">MEN'S ACCESSORIES</a>
+                <div>
+                    <a href="#">Ties</a>
+                    <a href="#">Wallets and cardholders</a>
+                    <a href="#">Scarves and mufflers</a>
+                    <a href="#">Sunglasses</a>
+                    <a href="#">Watches</a>
+                    <a href="#">Cufflinks</a>
+                    <a href="#">Belts</a>
+                    <a href="#">Face masks</a>
+                    <a href="#">Hats</a>
+                    <a href="#">Gloves</a>
+                </div>
+            </div>
+            <div>
+                <a  href="#">WOMEN'S BAGS</a>
+                <div>
+                    <a href="#">Hobo bags and purses</a>
+                    <a href="#">Shoulder bags</a>
+                    <a href="#">Backpacks</a>
+                    <a href="#">Luggage and suitcases</a>
+                    <a href="#">Clutches and evening bags</a>
+                    <a href="#">Satchel bags and purses</a>
+                    <a href="#">Top-handle bags</a>
+                    <a href="#">Duffel bags and weekend bags</a>
+                    <a href="#">Briefcases and work bags</a>
+                    <a href="#">Tote bags</a>
+                    <a href="#">Bucket bags and bucket purses</a>
+                    <a href="#">Crossbody bags and purses</a>
+                    <a href="#">Clutches and evening bags</a>
+                    <a href="#">Bag accessories</a>
+                </div>
+            </div>
+            <div>
+                <a  href="#">MEN'S BAGS</a>
+                <div>
+                    <a href="#">Backpacks</a>
+                    <a href="#">Gym bags and sports bags</a>
+                    <a href="#">Luggage and suitcases</a>
+                    <a href="#">Toiletry bags and wash bags</a>
+                    <a href="#">Messenger bags</a>
+                    <a href="#">Duffel bags and weekend bags</a>
+                    <a href="#">Tote bags</a>
+                    <a href="#">Pouches and wristlets</a>
+                    <a href="#">Belt Bags and, waist bags and fanny packs</a>
+                    <a href="#">Briefcases and laptop bags</a>
+                    <a href="#">Cases</a>
+                </div>
+            </div>
+            <div>
+                <a  href="#">WOMEN'S JEWELRY</a>
+                <div>
+                    <a href="#">Necklaces</a>
+                    <a href="#">Brooches</a>
+                    <a href="#">Bracelets</a>
+                    <a href="#">Earrings and ear cuffs</a>
+                    <a href="#">Rings</a>
+                </div>
+            </div>
+            <div>
+                <a  href="#">MEN'S JEWELRY</a>
+                <div>
+                    <a href="#">Necklaces</a>
+                    <a href="#">Bracelets</a>
+                    <a href="#">Rings</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- end six part -->
+         <!-- start footer page -->
+         <div id="end">
+            <div id="review">
+                <img src="https://cdn.trustpilot.net/brand-assets/1.9.0/logo-black.svg" id="reviewlogo" />
+                <img src="https://cdn.trustpilot.net/brand-assets/4.1.0/stars/stars-4.5.svg" alt="" id="stars" />
+                <div id="rate">
+                    <p>TrustScore<b> 4.4</b></p>
+                    <p><b>2,713</b> reviews</p>
+                </div>
+                <div>
+                    <img src="https://drive.google.com/uc?export=view&id=1wxyQttweqV8PKv1s4ewuQsDFiE9fP3-f" alt="">
+                    <img src="https://drive.google.com/uc?export=view&id=1AUJISa5A1bfTQTf95Jv97qpavKYd-D0Q" alt="">
+                </div>
+
+                <div id="playstore">
+                    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="" />
+                    <img src="https://www.freepnglogos.com/uploads/google-play-png-logo/new-get-it-on-google-play-png-logo-20.png" alt="" />
+                </div>
+                <a href="#">Learn about the Lyst app for iPhone, iPad and Android.</a>
+                <p>Ⓒ 2022 Lyst</p>
+            </div>
+            
+            <div>
+                <div>
+                    <ul id="list1"><h4>International<i class="fa fa-plus" style="font-size:24px" id="plus1"></i></h4>
+                        <div id="l1">
+                            <li><a href="">Lyst - AU</a></li>
+                            <li><a href="">Lyst - CA</a></li>
+                            <li><a href="">Lyst - UK</a></li>
+                            <li><a href="">Lyst - Österreich</a></li>
+                            <li><a href="">Lyst - Schweiz</a></li>
+                            <li><a href="">Lyst - Deutschland</a></li>
+                            <li><a href="">Lyst - España</a></li>
+                            <li><a href="">Lyst - France</a></li>
+                            <li><a href="">Lyst - Italia</a></li>
+                            <li><a href="">Lyst - 日本</a></li>
+                            <li><a href="">Lyst - België</a></li>
+                            <li><a href="">Lyst - Nederland</a></li>
+                        </div>
+                    </ul>
+                </div>
+
+                <div>
+                    <ul id="list2">
+                        <h4>help and info <i class="fa fa-plus" style="font-size:24px" id="plus2"></i></h4>
+                        <div id="l2">
+                            <li><a href="">Help center</a></li>
+                            <li><a href="">About us</a></li>
+                            <li><a href="">Shipping policy </a></li>
+                            <li><a href="">Returns policy</a></li>
+                            <li><a href="">Payments</a></li>
+                            <li><a href="">Refund policy</a></li>
+                            <li><a href="">Developers</a></li>
+                            <li><a href="">Careers</a></li>
+                            <li><a href="">Contact</a></li>
+                            <li><a href="">Terms & conditions</a></li>
+                            <li><a href="">Privacy & cookie policy</a></li>
+                            <li><a href="">Intellectual property</a></li>
+                            <li><a href="">Categories</a></li>
+                            <li><a href="">Become a partner</a></li>
+                            <li><a href="">Lyst Insights</a></li>
+                            <li><a href="">Lyst News</a></li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <!-- end footer page -->
+    </div>
+</body>
+
+<script src="navbar.js"></script>
+<script src="index.js"></script>
+</html>

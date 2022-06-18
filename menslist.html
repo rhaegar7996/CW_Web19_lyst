@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="list.css" />
+    <link rel="stylesheet" href="navbar.css">
+     <link rel = "icon" href ="https://www.lyst.com/favicon.ico" type = "image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+   
+    
+  </head>
+   <body>
+   
+  <div id="navbar" class="header" >
+     
+        <div>
+           <p id="country"> CN-US$</p>
+            <div id="set_country">
+               <i class="material-icons" style="font-size: 30px ; margin-left:90%; background-color: #f5f4f2; border-radius:50%" id="close_display">close</i>
+             <h2>Set your country</h2>
+             
+              <select id="country">
+                <option>Select Country</option>
+              </select>
+              <button>Set Country</button>
+          
+           
+            </div>
+            <p id="help">Help</p>
+            <div  class="helplist arrow-top">
+              <span class="close"></span>
+              <a href="#">Help Center</a>
+              <hr color="black" />
+              <a href="#">Contact us</a>
+                <hr color="black" />
+              <a href="#">About us</a>
+               <hr color="black" />
+              <a href="#">Careers</a>
+               <hr color="black" />
+              </div>
+            <p><a href=signin.html">Sign in</a></p>
+            <p><a href=signup.html">Join</a></p>
+             
+        </div>
+        
+        <div>
+          <i class="material-icons" id="search_icon">search</i>
+          <img  alt="Lyst" id="logo" src="https://static.lystit.com/static/n/pr_campaigns/year_in_fashion_2020/images/logo.a9c5dfdd1a8b.png"/>
+           <i class="material-icons" id="person_icon" style="font-size:36px;">person_outline</i>
+            <div id="menu_icon" onclick="redirect(this)">
+            <div class="line1 "></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+            <div class="line4"></div>
+           
+          </div>
+          <p class="option" id="w1"> <a href="womenslist.html">WOMEN</a></p>
+          <p class="option" id="w2"><a href="mens.html" style="color:black"><u>MEN</u></a></p>
+          <input id="search" type="search" placeholder='SEARCH (E.G."ACNE JEANS")' icon="search"/>
+          <i class="material-icons" style="font-size: 36px" id="close_search">close</i>
+        </div>
+      </div>
+    <div id="products">
+      <div >
+           
+        <div id="clothes" onclick="clothes()"><a>Clothing </a><i class="material-icons" id="arr1"style='font-size:24px'>arrow_forward</i></div>
+       
+        <ul id="display" class="clothing">
+          <i class="material-icons" style="font-size: 24px" id="close_womens_page">close</i>
+          <li><a>All Clothing</a></li>
+          <li><a>Beachwear</a></li>
+          <li><a>Coats</a></li>
+          
+          <li><a>Jackets</a></li>
+          <li><a>Jeans</a></li>
+          
+          <li><a>Sweaters and knitwear</a></li>
+        
+          <li><a>Nightwear and sleepwear</a></li>
+          
+            <li><a>Pants, Slacks and Chinos</a></li>
+            <li><a>Shorts</a></li>
+            <li><a>Skirts</a></li>
+            <li><a>Suits</a></li>
+            <li><a>Activewear, gym and workout clothes</a></li>
+            <li><a>T-shirts</a></li>
+            <li><a>New Arrivals in Clothing</a></li>
+            <li><a>Back in Stock Clothing</a></li>
+            <li><a><i class="fa fa-tag fa-rotate-90"style="font-size: 17px ;color:#f9302d" id=""></i>Clothing on Sale</a></li>
+        
+        </ul>
+        
+        </div>
+        <div onclick="shoes()"><a>Shoes </a><i class="material-icons" id="arr2"style='font-size:24px'>arrow_forward</i>
+        <ul class="shoes" id="display">
+                <li><a>All Shoes</a></li>
+                <li><a>Boots</a></li>
+                <li><a>Lace-ups</a></li>
+                <li><a>Sandals, slides and flip flops</a></li>
+                <li><a>Slip-on shoes</a></li>
+                <li><a>New Arrivals in Shoes</a></li>
+                <li><a>Back in Stock Shoes</a></li>
+                <li><a> <i class="fa fa-tag fa-rotate-90"style="font-size: 17px ;color:#f9302d" id=""></i>Shoes on
+          Sale</a></li>
+
+        </ul></div>
+        <div onclick="Accessories()"><a>Accessories</a> <i class="material-icons" id="arr3"style='font-size:24px'>arrow_forward</i>
+          <ul class="accessories" id="display">
+            <li><a>All Accessories</a></li>
+            <li><a>Belts</a></li>
+            <li><a>Cufflinks</a></li>
+            <li><a>Face masks</a></li>
+            <li><a>Gloves</a></li>
+            
+            <li><a>Hats</a></li>
+            <li><a>Scarves and mufflers</a></li>
+            <li><a>Sunglasses</a></li>
+            <li><a>Ties</a></li>
+            <li><a>Wallets and cardholders</a></li>
+            <li><a>Watches</a></li>
+            <li><a>New Arrivals in Accessories</a></li>
+            <li><a>Back in Stock Accessories</a></li>
+            <li><a><i class="fa fa-tag fa-rotate-90"style="font-size: 17px ;color:#f9302d" id=""></i>Accessories on Sale</a></li>
+
+          </ul>
+        </div>
+        <div onclick="bags()"><a>Bags </a><i class="material-icons" id="arr4"style='font-size:24px'>arrow_forward</i>
+          <ul class="bags" id="display">
+            <li><a>All Bags</a></li>
+            <li><a>Backpacks</a></li>
+            <li><a>Bag accessories</a></li>
+            <li><a>Beach bag tote and straw bags</a></li>
+            <li><a>Belt bags, waist bags and fanny packs</a></li>
+            <li><a>Briefcases and work bags</a></li>
+    
+            <li><a>Duffel bags and weekend bags</a></li>
+            <li><a>Luggage and suitcases</a></li>
+        
+            <li><a>Top-handle bags</a></li>
+            <li><a>Tote bags</a></li>
+            <li><a>New Arrivals in Bags</a></li>
+            <li><a>Back in Stock Bags</a></li>
+            <li><a><i class="fa fa-tag fa-rotate-90"style="font-size: 17px ;color:#f9302d" id=""></i>bags on Sale</a></li>
+          </ul>
+        </div>
+        <div onclick="jewelry()"><a>Jewelry</a><i class="material-icons" id="arr5"style='font-size:24px'>arrow_forward</i>
+        <ul id="display" class="jewelry">
+          
+           <li><a>All Jewelry</a></li>
+            <li><a>Bracelets</a></li>
+          
+        
+            <li><a>Necklaces</a></li>
+            <li><a>Rings</a></li>
+            <li><a>New Arrivals in Jewelry</a></li>
+            <li><a>Back in Stock Jewelry</a></li>
+            <li><a><i class="fa fa-tag fa-rotate-90"style="font-size: 17px ;color:#f9302d" id=""></i>jewelry on Sale</a></li>
+
+
+        </ul></div>
+        <div onclick="brands()"><a>Brands</a><i class="material-icons" id="arr6"style='font-size:24px'>arrow_forward</i>
+          <ul id="display" class="brands">
+            <li><a>Popular Brands</a></li>
+            <li><a>Acne Studios</a></li>
+            <li><a>Adidas</a></li>
+            <li><a>Balenciaga</a></li>
+            <li><a>Burberry</a></li>
+            <li><a>Gucci</a></li>
+            <li><a>Ermenegildo Zegna</a></li>
+            <li><a>Fendi</a></li>
+            <li><a>Givenchy</a></li>
+
+            <li><a>Gucci</a></li>
+            <li><a>Moncler</a></li>
+            <li><a>Nike</a></li>
+            <li><a>Off-White C/O Virgil Abloh</a></li>
+            <li><a>Paul Smith</a></li>
+          </ul>
+        </div>
+        <div><a href="https://www.lyst.com/shop/mens/?paid_session_id=d072b8b3-bd03-4d95-b992-9d6c641acaa0">All Men's</a></div>
+        <div><a href="https://www.lyst.com/shop/mens-sale/?paid_session_id=d072b8b3-bd03-4d95-b992-9d6c641acaa0">
+          <i class="fa fa-tag"style="font-size: 17px ;color:#f9302d" id=""></i>
+          Sale</a></div>
+      
+      <div id="dummy">Country: CN-USS</div>
+      <div id="dummy">Help Center</div>
+      <div id="dummy">contact us</div>
+      <div id="dummy">about us</div>
+      <div id="dummy">Careers</div>
+      </div>
+      <hr color="black" />
+    </body>
+    <script src="./navbar.js"></script>
+
+</html>
+<script>
+
+document.querySelector("#navbar").style.position="fixed";
+
+document.querySelector("#menu_icon").addEventListener("click", closepage);
+
+  function clothes(){
+    document.querySelector(".clothing").style.display="block";
+     document.querySelector(".jewelry").style.display="none";
+      document.querySelector(".brands").style.display="none";
+       document.querySelector(".shoes").style.display="none";
+        document.querySelector(".accessories").style.display="none";
+        document.querySelector(".bags").style.display="none";
+  }
+  function jewelry(){
+     document.querySelector(".clothing").style.display="none";
+     document.querySelector(".jewelry").style.display="block";
+      document.querySelector(".brands").style.display="none";
+       document.querySelector(".shoes").style.display="none";
+        document.querySelector(".accessories").style.display="none";
+        document.querySelector(".bags").style.display="none";
+  }
+  function brands(){
+   document.querySelector(".clothing").style.display="none";
+     document.querySelector(".jewelry").style.display="none";
+      document.querySelector(".brands").style.display="block";
+       document.querySelector(".shoes").style.display="none";
+        document.querySelector(".accessories").style.display="none";
+        document.querySelector(".bags").style.display="none";
+  }
+   function shoes(){
+  document.querySelector(".clothing").style.display="none";
+     document.querySelector(".jewelry").style.display="none";
+      document.querySelector(".brands").style.display="none";
+       document.querySelector(".shoes").style.display="block";
+        document.querySelector(".accessories").style.display="none";
+        document.querySelector(".bags").style.display="none";
+  }
+  function Accessories(){
+  document.querySelector(".clothing").style.display="none";
+     document.querySelector(".jewelry").style.display="none";
+      document.querySelector(".brands").style.display="none";
+       document.querySelector(".shoes").style.display="none";
+        document.querySelector(".accessories").style.display="block";
+        document.querySelector(".bags").style.display="none";
+  }
+   function bags(){
+   document.querySelector(".clothing").style.display="none";
+     document.querySelector(".jewelry").style.display="none";
+      document.querySelector(".brands").style.display="none";
+       document.querySelector(".shoes").style.display="none";
+        document.querySelector(".accessories").style.display="none";
+        document.querySelector(".bags").style.display="block";
+  }
+  
+  document.querySelector("#close_womens_page").addEventListener("click",closepage);
+  function closepage(){
+    window.location.href="index.html";
+  } 
+ document.querySelector("#w1").style.display="block";
+ document.querySelector("#w2").style.display="block";
+   </script>
