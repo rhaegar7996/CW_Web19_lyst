@@ -252,7 +252,7 @@ wadata=[
     img : "https://cdna.lystit.com/200/250/tr/photos/mytheresa/14608f70/burberry-black-Cappello-da-pescatore-con-logo.jpeg" }
     ];
     let womendata = document.getElementById("box");
-    let womenAccessoriesLS = JSON.parse(localStorage.getItem("cartData")) || [];
+    let arrLS = JSON.parse(localStorage.getItem("cartData")) || [];
 
     function displayProducts(wadata) {
         womendata.innerHTML = "";
@@ -279,11 +279,17 @@ wadata=[
 
             let btn = document.createElement("button")
             btn.innerText = "Add To Cart"
+
             btn.addEventListener("click",function(){
-                womenAccessoriesLS.push(elem);
-                localStorage.setItem("cartData",JSON.stringify(womenAccessoriesLS));
-                alert("Added to the Cart");
-            })
+                if(addtocartfunc(elem.product_id)==true){
+                 alert("Added to Cart Succesfully");
+                 arrLS.push(elem);
+                 localStorage.setItem("cartData",JSON.stringify(arrLS));
+                }
+                else{
+                  alert("Product is Already in the Cart");
+                }
+              })
 
             product1.append(img)
             product2.append(name, product_id,category,price)
@@ -296,7 +302,15 @@ wadata=[
     }
     displayProducts(wadata)
 
-
+function addtocartfunc(product_id){
+        for(let i=0; i<arrLS.length; i++){
+        if(arrLS[i].product_id===product_id){
+        return false;
+        }
+        }
+        return true;
+          }
+          
     document.querySelector("#Category").addEventListener("change", function (){
         let val = document.querySelector("#Category").value;
         if (val == "All") {

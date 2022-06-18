@@ -291,7 +291,7 @@ wsdata=[
       ];
       let womendata = document.getElementById("box");
   
-      let womenShoesLS = JSON.parse(localStorage.getItem("cartData")) || [];
+      let arrLS = JSON.parse(localStorage.getItem("cartData")) || [];
   
       function displayProducts(wsdata) {
           womendata.innerHTML = "";
@@ -318,11 +318,17 @@ wsdata=[
   
               let btn = document.createElement("button")
               btn.innerText = "Add To Cart"
-              btn.addEventListener("click",function(){
-                womenShoesLS.push(elem);
-                localStorage.setItem("cartData",JSON.stringify(womenShoesLS));
-                alert("Added to the Cart");
-            })
+
+            btn.addEventListener("click",function(){
+                if(addtocartfunc(elem.product_id)==true){
+                 alert("Added to Cart Succesfully");
+                 arrLS.push(elem);
+                 localStorage.setItem("cartData",JSON.stringify(arrLS));
+                }
+                else{
+                  alert("Product is Already in the Cart");
+                }
+              })
 
               product1.append(img)
               product2.append(name, product_id,category,price)
@@ -333,7 +339,15 @@ wsdata=[
           })
       }
       displayProducts(wsdata)
-  
+      
+      function addtocartfunc(product_id){
+        for(let i=0; i<arrLS.length; i++){
+        if(arrLS[i].product_id===product_id){
+        return false;
+        }
+        }
+        return true;
+          }
   
       document.querySelector("#Category").addEventListener("change", function () {
           let val = document.querySelector("#Category").value;
