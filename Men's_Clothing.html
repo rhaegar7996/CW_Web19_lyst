@@ -4,11 +4,218 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>Your World of Fashion | Lyst</title>
+    <!-- add icon on title link -->
+    <link rel = "icon" href ="https://www.lyst.com/favicon.ico" type = "image/x-icon">
+    <!-- External link for nav bar -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700">
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+    <!-- end External link for nav bar -->
+
+    <!-- font link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <!-- font Link end -->
+
+    <!-- link for menpage css -->
+    <link rel="stylesheet" href="Men's_Clothing.css">
+    <!-- link footer page css  -->
+    <link rel="stylesheet" href="Men's_Footer.css">
+    <!-- link navbar css page -->
+    <link rel="stylesheet" href="Men's_Navbar.css">
 </head>
 <body>
-    
+
+       <!-- div for nav bar -->
+       <div id="navbar" class="header" data-scroll>
+        
+        <div>
+        <p id="country"> CN-US$</p>
+            <div id="set_country">
+            <i class="material-icons" style="font-size: 30px ; margin-left:90%; background-color: #f5f4f2; border-radius:50%" id="close_display">close</i>
+            <h2>Set your country</h2>
+            
+            <select id="country">
+                <option>Select Country</option>
+            </select>
+            <button>Set Country</button>
+        
+        
+            </div>
+            <p id="help">Help</p>
+            <div  class="helplist arrow-top">
+            <span class="close"></span>
+            <a href="#">Help Center</a>
+            <hr color="black" />
+            <a href="#">Contact us</a>
+                <hr color="black" />
+            <a href="#">About us</a>
+            <hr color="black" />
+            <a href="#">Careers</a>
+            <hr color="black" />
+            </div>
+            <p><a href=signin.html">Sign in</a></p>
+            <p><a href=signup.html">Join</a></p>
+            
+        </div>
+        
+        <div>
+        <i class="material-icons" id="search_icon">search</i>
+        <img  alt="Lyst" id="logo" src="https://static.lystit.com/static/n/pr_campaigns/year_in_fashion_2020/images/logo.a9c5dfdd1a8b.png"/>
+        <i class="material-icons" id="person_icon" style="font-size:36px;">person_outline</i>
+            <div id="menu_icon" onclick="redirect(this)">
+            <div class="line1 "></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+            <div class="line4"></div>
+        
+        </div>
+        <p class="option"><a href="womenslist.html">WOMEN</a></p>
+        <p class="option"><a href="menslist.html">MEN</a></p>
+        <input id="search" type="search" placeholder='SEARCH (E.G."ACNE JEANS")' icon="search"/>
+        <i class="material-icons" style="font-size: 36px" id="close_search">close</i>
+        </div>
+    </div>
+    <!--  nav bar end -->
+    <!-- write your owan code below -->
+
+    <div id="heading">
+        <div>
+            <h1>CLOTHING FOR MEN</h1>
+        </div>
+    </div>
+    <div id="mainBody">
+        <div id="sideMain">
+            <div>Filters</div>
+            <div>
+                <select name="Gender" id="Gender">
+                    <option value="Gender">Gender</option>
+                    <option value="Women's">Women's</option>
+                    <option value="Men's">Men's</option>
+                </select>
+                <select name="Category" id="Category">
+                    <option value="Category">Category</option>
+                    <option value="All">All</option>
+                    <option value="T-shirt">T-shirt</option>
+                    <option value="Jeans">Jeans</option>
+                    <option value="Active Wear">Active Wear</option>
+                    <option value="Jackets">Jackets</option>
+                    <option value="Shirts">Shirts</option>
+                </select>
+                <select name="Brand" id="Brand">
+                    <option value="">Brand</option>
+                    <option value="All">All</option>
+                    <option value="Hugo Boss">Hugo Boss</option>
+                    <option value="Nike">Nike</option>
+                    <option value="Lacoste">Lacoste</option>
+                    <option value="Ralph Lauren">Ralph Lauren</option>
+                    <option value="Diesel">Diesel</option>
+                </select>
+                <select name="Price" id="Price">
+                    <option value="Price">Price</option>
+                </select>
+                <select name="Shipping" id="Shipping">
+                    <option value="Shipping">Shipping</option>
+                </select>
+                <select name="Color" id="Color">
+                    <option value="Color">Color</option>
+                </select>
+                <select name="Material" id="Material">
+                    <option value="Material">Material</option>
+                </select>
+                <select name="Designer" id="Designer">
+                    <option value="Designer">Designer</option>
+                </select>
+                <select name="Stores" id="Stores">
+                    <option value="Stores">Stores</option>
+                </select>
+            </div>
+        </div>
+        <div id="container">
+            <div id="sidebar">
+                <select name="Sort by recomended" id="SortPrice">
+                    <option value="Sort by recomended">Sort by recomended</option>
+                    <option value="Descending">Sort by Price(High to Low)</option>
+                    <option value="Ascending">Sort by Price(Low to High)</option>
+                </select>
+            </div>
+            <div id="box"></div>
+        </div>
+    </div>
+    <!-- start footer page -->
+    <div id="end">
+        <div id="review">
+            <img src="https://cdn.trustpilot.net/brand-assets/1.9.0/logo-black.svg" id="reviewlogo" />
+            <img src="https://cdn.trustpilot.net/brand-assets/4.1.0/stars/stars-4.5.svg" alt="" id="stars" />
+            <div id="rate">
+                <p>TrustScore<b> 4.4</b></p>
+                <p><b>2,713</b> reviews</p>
+            </div>
+            <div>
+                <img src="https://drive.google.com/uc?export=view&id=1wxyQttweqV8PKv1s4ewuQsDFiE9fP3-f" alt="">
+                <img src="https://drive.google.com/uc?export=view&id=1AUJISa5A1bfTQTf95Jv97qpavKYd-D0Q" alt="">
+            </div>
+
+            <div id="playstore">
+                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="" />
+                <img src="https://www.freepnglogos.com/uploads/google-play-png-logo/new-get-it-on-google-play-png-logo-20.png" alt="" />
+            </div>
+            <a href="#">Learn about the Lyst app for iPhone, iPad and Android.</a>
+            <p>Ⓒ 2022 Lyst</p>
+        </div>
+        
+        <div>
+            <div>
+                <ul id="list1"><h4>International<i class="fa fa-plus" style="font-size:24px" id="plus1"></i></h4>
+                    <div id="l1">
+                        <li><a href="">Lyst - AU</a></li>
+                        <li><a href="">Lyst - CA</a></li>
+                        <li><a href="">Lyst - UK</a></li>
+                        <li><a href="">Lyst - Österreich</a></li>
+                        <li><a href="">Lyst - Schweiz</a></li>
+                        <li><a href="">Lyst - Deutschland</a></li>
+                        <li><a href="">Lyst - España</a></li>
+                        <li><a href="">Lyst - France</a></li>
+                        <li><a href="">Lyst - Italia</a></li>
+                        <li><a href="">Lyst - 日本</a></li>
+                        <li><a href="">Lyst - België</a></li>
+                        <li><a href="">Lyst - Nederland</a></li>
+                    </div>
+                </ul>
+            </div>
+
+            <div>
+                <ul id="list2">
+                    <h4>help and info <i class="fa fa-plus" style="font-size:24px" id="plus2"></i></h4>
+                    <div id="l2">
+                        <li><a href="">Help center</a></li>
+                        <li><a href="">About us</a></li>
+                        <li><a href="">Shipping policy </a></li>
+                        <li><a href="">Returns policy</a></li>
+                        <li><a href="">Payments</a></li>
+                        <li><a href="">Refund policy</a></li>
+                        <li><a href="">Developers</a></li>
+                        <li><a href="">Careers</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="">Terms & conditions</a></li>
+                        <li><a href="">Privacy & cookie policy</a></li>
+                        <li><a href="">Intellectual property</a></li>
+                        <li><a href="">Categories</a></li>
+                        <li><a href="">Become a partner</a></li>
+                        <li><a href="">Lyst Insights</a></li>
+                        <li><a href="">Lyst News</a></li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <!-- end footer page -->
 </body>
+
 </html>
 
 <script src="./Men's_Clothing.js"></script>
+<script src="./Men's_Navbar.js"></script>
