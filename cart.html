@@ -453,10 +453,10 @@ input::placeholder {
   {
     let box = document.createElement('div');
       let avatar = document.createElement('img');
-      avatar.setAttribute('src',elem.image_url)
+      avatar.setAttribute('src',elem.img)
      
       let name = document.createElement('h2')
-      name.innerText= elem.name
+      name.innerText= elem.brand + ' ' + elem.category
       let price = document.createElement('h2')
       price.innerText = elem.price + '$'
     
@@ -521,7 +521,7 @@ function updateQuant () {
 function Delete(elem,index) {
  
     cartData = cartData.filter(function(elem) {
-        return elem.name != elem.name;
+        return elem.id != elem.id;
     })
     cost -= (elem.price * elem.quant);
     
