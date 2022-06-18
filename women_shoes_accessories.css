@@ -468,6 +468,7 @@
 }
 
 #mainBody {
+ 
     width: 80%;
     height: auto;
     margin: auto;
@@ -490,11 +491,12 @@
 }
 
 #box {
-    width:1035px;
+  width: 100%;
     margin-left: auto;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4,1fr);
     grid-template-rows: auto;
+  
 }
 
 #box>div {
@@ -523,9 +525,10 @@
 }
 
 #sideMain {
-    width: 50%;
+    width: 28%;
     padding: 5px;
     display: block;
+  
 }
 
 #sideMain>div:nth-child(1) {
