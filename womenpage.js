@@ -504,8 +504,8 @@
         },
     ]
 
-    let womenClothingLS = JSON.parse(localStorage.getItem("cartData")) || [];
     let womendata = document.getElementById("box");
+    let womendataLS = JSON.parse(localStorage.getItem("cartData")) || [];
 
 
     function displayProducts(womenClothing) {
@@ -530,6 +530,16 @@
 
             let btn = document.createElement("button")
             btn.innerText = "Add To Cart"
+            btn.addEventListener("click",function(){
+                if(btnFunc(elem.product_id)==true){
+                    alert("Product added Successfully");
+                    womendataLS.push(elem);
+                    // console.log(womendataLS);
+                    localStorage.setItem("cardData",JSON.stringify(womendataLS))
+                } else {
+                    alert("Product already in the cart") 
+                }
+            })
 
             product1.append(img)
             product2.append(name, product_name, price)
@@ -538,7 +548,7 @@
             womendata.append(product)
 
         })
-        localStorage.setItem("cartData",JSON.stringify(womenClothing))
+        // localStorage.setItem("cartData",JSON.stringify(womenClothing))
     }
     displayProducts(womenClothing)
 
@@ -586,5 +596,13 @@
             displayProducts(womenClothing);;
         }
     })
+    function btnFunc(id){
+        for(let i=0;i<womendataLS.length;i++){
+            if(womendataLS[i].product_id == id){
+                return false;
+            }
+        } 
+        return true;
+    }
 
     
