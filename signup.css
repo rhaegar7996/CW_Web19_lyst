@@ -1,0 +1,151 @@
+
+      * {
+        margin: 0px;
+        padding: 0px;
+      
+      }
+      body {
+        width: 100%;
+        
+      }
+      
+          #main{
+              width: 65%;
+              display: flex;
+              margin: auto;
+              font-family: Suisse Intl,Helvetica Neue,Helvetica,Arial,sans-serif;
+              font-size: medium;
+           
+          }
+          #data{
+              width: 50%;
+              display: flexbox;
+              padding: 10px;
+              margin: auto;
+          }
+      /* button */
+      
+      .fullwidth {
+      width:98%;
+      margin-left:0;
+      margin-right:0;
+      padding-left:0;
+      padding-right:0;
+      display:block;
+      text-align:center; /*This will result in centering the link text, which is probably what you want -brianjohnsondesign.com*/
+      }
+      .btn-google {
+          margin-right: -4px;
+          margin-left: 1px;
+          padding: 8px;
+          color: #606060;
+          background: #fff;
+          border-color: #e0e1e7;
+        border: 2px solid #E0E1E7;
+          text-decoration: none;
+          width: 94%;
+      }
+      .full{
+          width: 100%;
+      }
+      #submit{    
+          background-color: black;
+          color: white;
+          font-weight: bold;
+          text-align: center;
+      margin: auto;
+      padding: 10px;
+      }
+      #submit:hover {
+          background-color: white;
+          color: black;
+      }
+      /* button */
+      .in {
+          width: 93%;
+          border: #E2E2E8 solid 2px ;
+          padding: 10px;
+         
+      }
+      .up{
+      width: 100%;
+      text-decoration: none;
+      margin: auto;
+      padding: 8px;
+      text-align: center;
+      border: solid .4px #E2E2E8;
+      color: black;
+      }
+      h4,h2,p{
+          text-align: center;
+      }
+      .upp{
+          display: flex;
+      }
+      p{
+          color: #535050;
+      }
+      .info{
+          height:670px;
+          width: 50%;
+            
+             display: flexbox;
+              margin: auto;
+         
+        background-color: #B798F7;
+        background-image:
+          linear-gradient(
+              #B798F7, #8662ce
+          );
+         
+          
+      }
+      .card{
+          background-color: white;
+          width: 70%;
+          
+          padding: 10% 5% 10% 5%;
+         
+        margin: auto;
+         margin-top: 80%;
+          font-size: smaller;
+      }
+      .card h3{
+          font-weight: 200;
+          
+      }
+      @media all and (min-width: 200px) and (max-width: 902px){
+          #main{
+              width: 65%;
+              display: flex;
+              flex-direction: column;
+              margin: auto;
+              font-family: Suisse Intl,Helvetica Neue,Helvetica,Arial,sans-serif;
+              font-size: medium;
+          }
+          #data{
+              width: 50%;
+              display: flexbox;
+              padding: 10px;
+              margin: auto;
+          }
+          .info{
+         
+          width: 50%;
+            
+             display: flexbox;
+              margin: auto;
+         
+              background-image: linear-gradient(-225deg, #B6CEE8 0%, #F578DC 100%);
+         }
+         .card{
+          background-color: white;
+          width: 90%;
+          
+          padding: 10% 5% 10% 5%;
+         
+        margin: auto;
+        
+          font-size: smaller;
+      }
+        }

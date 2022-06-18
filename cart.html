@@ -417,7 +417,7 @@ input::placeholder {
             <div class="wrap cf">
                 
                 <div class="heading cf">
-                  <h1>My Cart 🛒</h1> <a href="#" class="continue">Continue Shopping ➤</a>
+                  <h1>My Cart 🛒</h1> <a href="index.html" class="continue">Continue Shopping ➤</a>
                 </div>
            </div>
     <div id="container"></div>
@@ -453,10 +453,10 @@ input::placeholder {
   {
     let box = document.createElement('div');
       let avatar = document.createElement('img');
-      avatar.setAttribute('src',elem.image_url)
+      avatar.setAttribute('src',elem.img)
      
       let name = document.createElement('h2')
-      name.innerText= elem.name
+      name.innerText= elem.brand + ' ' + elem.category
       let price = document.createElement('h2')
       price.innerText = elem.price + '$'
     
@@ -521,7 +521,7 @@ function updateQuant () {
 function Delete(elem,index) {
  
     cartData = cartData.filter(function(elem) {
-        return elem.name != elem.name;
+        return elem.product_id != elem.product_id;
     })
     cost -= (elem.price * elem.quant);
     
