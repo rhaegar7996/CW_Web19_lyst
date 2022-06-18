@@ -321,12 +321,12 @@ wsdata=[
 
             btn.addEventListener("click",function(){
                 if(addtocartfunc(elem.product_id)==true){
-                 alert("Added to Cart Succesfully");
+                 alert("Product added Successfully");
                  arrLS.push(elem);
                  localStorage.setItem("cartData",JSON.stringify(arrLS));
                 }
                 else{
-                  alert("Product is Already in the Cart");
+                  alert("Product already in the cart");
                 }
               })
 
