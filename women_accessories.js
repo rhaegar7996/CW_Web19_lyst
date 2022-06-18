@@ -290,7 +290,7 @@ wadata=[
                   alert("Product already in the cart");
                 }
               })
-
+              elem.quant=1;
             product1.append(img)
             product2.append(name, product_id,category,price)
             product3.append(btn)
