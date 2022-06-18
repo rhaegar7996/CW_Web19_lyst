@@ -382,7 +382,7 @@ function displayProducts(ms_prod_data) {
                 alert("Product added Successfully");
                 menShoesLS.push(elem);
                 // console.log(menShoesLS);
-                localStorage.setItem("cardData",JSON.stringify(menShoesLS))
+                localStorage.setItem("cartData",JSON.stringify(menShoesLS))
             } else {
                 alert("Product already in the cart") 
             }

@@ -535,7 +535,7 @@
                     alert("Product added Successfully");
                     womendataLS.push(elem);
                     // console.log(womendataLS);
-                    localStorage.setItem("cardData",JSON.stringify(womendataLS))
+                    localStorage.setItem("cartData",JSON.stringify(womendataLS))
                 } else {
                     alert("Product already in the cart") 
                 }

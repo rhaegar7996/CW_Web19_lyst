@@ -361,7 +361,7 @@ function displayProducts(mc_prod_data) {
                 alert("Product added Successfully");
                 menClothingLS.push(elem);
                 // console.log(menClothingLS);
-                localStorage.setItem("cardData",JSON.stringify(menClothingLS))
+                localStorage.setItem("cartData",JSON.stringify(menClothingLS))
             } else {
                 alert("Product already in the cart") 
             }
