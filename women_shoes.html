@@ -4,518 +4,210 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Womens Shoes</title>
-    <style>
-        #products{
-            width: 50vw;
-            display: grid;
-            grid-template-columns: repeat(4,auto);
-            grid-template-rows: auto;
-        }
-        #products>div{
-            border: 1px solid lightgrey;
-            padding: 10px;
-        }
-        #products>div>img{
-            width: auto;
-        }
-        #heading{
-            height: 100px;
-            background-color: #f5f4f2;
-            border-top: 1px solid black;
-            border-bottom: 1px solid black;
-            display: flex;
-            align-items: center;
-            padding-left: 250px;
-        }
-        #sidebar{
-            width: 300px;
-            height: 500px;
-        }
-        select{
-            display: block;
-            width: 100%;
-            font-size: 15px;
-            font-weight: bold;
-            border: none;
-            margin-top:10px ;
-            height: 40px;
-        }
-        #main{
-            width: 72%;
-            margin: auto;
-            display: flex;
-            justify-content: space-around;
-            
-        }
-        #pricesort{
-            width: 25%;
-            border: 2px solid black;
-            padding: 10px;
-            border-radius: 5px;
-        }
-        #bigbox>div:first-child{
-            width: 100%;
-            height: 70px;
-            display: flex;
-            justify-content: end;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-    </style>
+    <title>Your World of Fashion | Lyst</title>
+    <link rel = "icon" href ="https://www.lyst.com/favicon.ico" type = "image/x-icon">
+    <link rel="stylesheet" href="women_shoes_accessories.css">
 </head>
 <body>
-    <div id="heading"><h1>SHOES FOR WOMEN</h1></div>
-   <div id="main">
-<div id="sidebar">
-    <h2>Filters</h2>
-    <hr>
-    <select name="Gender" id="Gender">
-        <option value="Gender">Gender</option>
-        <option value="Women's">Women's</option>
-        <option value="Men's">Men's</option>
-    </select>
-    <hr>
-    <select name="Category" id="Category">
-        <option value="All">Catagory</option>
-        <option value="Boots">Boots</option>
-        <option value="Flats and flat shoes">Flats and flat shoes</option>
-        <option value="Heels">Heels</option>
-        <option value="Sneakers">Sneakers</option>
-    </select>
-    <hr>
-    <select name="Brand" id="Brand">
-        <option value="All">Select Brand</option>
-        <option value="OFF-WHITE C/O VIRGIL ABLOH">OFF-WHITE C/O VIRGIL ABLOH</option>
-        <option value="GUCCI">GUCCI</option>
-        <option value="BALENCIAGA">BALENCIAGA</option>
-       <option value="HUNTER">HUNTER</option>
-       <option value="COACH">COACH</option>
-       <option value="DIOR">DIOR</option>
-    </select>
-    <hr>
-    <select name="Sale" id="Sale">
-        <option>Sale</option>
-        <option value="On Sale">On Sale</option>
-        <option value="20% off or more">20% off or more</option>
-        <option value="50% off or more">50% off or more</option>
-        <option value="70% off or more">70% off or more</option>
-    </select>
-    <hr>
-    <select name="Price" id="Price">
-     <option value="Price">Price</option>
-    </select>
-    <hr>
-    <select name="Shipping" id="Shipping">
-        <option value="Shipping">Shipping</option>
-        <option value="Free shipping">Free shipping</option>
-    </select>
-    <hr>
-    <select name="Color" id="Color">
-        <option value="Color">Color</option>
-        <option value="Black">Black</option>
-        <option value="Blue">Blue</option>
-        <option value="Brown">Brown</option>
-        <option value="Red">Red</option>
-        <option value="Pink">Pink</option>
-        <option value="Multicolor">Multicolor</option>
-        <option value="Green">Green</option>
-        <option value="Orange">Orange</option>
-        <option value="Purple">Purple</option>
-        <option value="White">White</option>
-        <option value="Yellow">Yellow</option>
-        <option value="Natural">Natural</option>
-        <option value="Metallic">Metallic</option>
-        <option value="Grey">Grey</option>
-    </select>
-    <hr>
-    <select name="Size" id="Size">
-        <option value="Size">Size</option>
-    </select>
-    <hr>
-    <select name="Material" id="Material">
-        <option value="Material">Material</option>
-    </select>
-    <hr>
-    <select name="Designers" id="Designers">
-        <option value="Designers">Material</option>
-    </select>
-    <hr>
-    <select name="Stores" id="Stores">
-        <option value="Stores">Stores</option>
-    </select>
-    <hr>
+    <!-- navbar start -->
+    <div>
+    <div id="navbar" class="header" data-scroll>
+    
+        <div>
+        <p id="country"> CN-US$</p>
+            <div id="set_country">
+            <i class="material-icons" style="font-size: 30px ; margin-left:90%; background-color: #f5f4f2; border-radius:50%" id="close_display">close</i>
+            <h2>Set your country</h2>
+            
+            <select id="country">
+                <option>Select Country</option>
+            </select>
+            <button>Set Country</button>
+        
+        
+            </div>
+            <p id="help">Help</p>
+            <div  class="helplist arrow-top">
+            <span class="close"></span>
+            <a href="#">Help Center</a>
+            <hr color="black" />
+            <a href="#">Contact us</a>
+                <hr color="black" />
+            <a href="#">About us</a>
+            <hr color="black" />
+            <a href="#">Careers</a>
+            <hr color="black" />
+            </div>
+            <p><a href=signin.html">Sign in</a></p>
+            <p><a href=signup.html">Join</a></p>
+            
+        </div>
+        
+        <div>
+        <i class="material-icons" id="search_icon">search</i>
+        <img  alt="Lyst" id="logo" src="https://static.lystit.com/static/n/pr_campaigns/year_in_fashion_2020/images/logo.a9c5dfdd1a8b.png"/>
+        <i class="material-icons" id="person_icon" style="font-size:36px;">person_outline</i>
+            <div id="menu_icon" onclick="redirect(this)">
+            <div class="line1 "></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+            <div class="line4"></div>
+        
+        </div>
+        <p class="option"><a href="womens.html">WOMEN</a></p>
+        <p class="option"><a href="mens.html">MEN</a></p>
+        <input id="search" type="search" placeholder='SEARCH (E.G."ACNE JEANS")' icon="search"/>
+        <i class="material-icons" style="font-size: 36px" id="close_search">close</i>
+        </div>
+    </div>
 </div>
-<div id="bigbox">
-<div>
-    <select name="Sort by recomended" id="pricesort">
-        <option value="Sort by recomended">Sort by recomended</option>
-        <option value="descending">Sort by Price(High to Low)</option>
-        <option value="ascending">Sort by Price(Low to High)</option>
-    </select>
-</div>
-<div id="products"></div>
-</div>
+<!--  nav bar end -->
 
-   </div> 
+
+
+
+    <div id="heading">
+        <div>
+            <h1>SHOES FOR WOMEN</h1>
+        </div>
+    </div>
+    <div id="mainBody">
+        <div id="sideMain">
+            <div>Filters</div>
+            <div>
+                <select name="Gender" id="Gender">
+                    <option value="Gender">Gender</option>
+                    <option value="Women's">Women's</option>
+                    <option value="Men's">Men's</option>
+                </select>
+                <select name="Category" id="Category">
+                    <option value="Category">Category</option>
+                    <option value="All">All</option>
+                    <option value="Boots">Boots</option>
+                    <option value="Flats and flat shoes">Flats and flat shoes</option>
+                    <option value="Heels">Heels</option>
+                    <option value="Sneakers">Sneakers</option>
+                </select>
+                <select name="Brand" id="Brand">
+                    <option value="">Brand</option>
+                    <option value="All">All</option>
+                    <option value="OFF-WHITE C/O VIRGIL ABLOH">OFF-WHITE C/O VIRGIL ABLOH</option>
+                    <option value="GUCCI">GUCCI</option>
+                    <option value="BALENCIAGA">BALENCIAGA</option>
+                    <option value="CALVIN KLEIN">CALVIN KLEIN</option>
+                    <option value="DIOR">DIOR</option>
+                </select>
+                <select name="Price" id="Price">
+                    <option value="Price">Price</option>
+                </select>
+                <select name="Shipping" id="Shipping">
+                    <option value="Shipping">Shipping</option>
+                </select>
+                <select name="Color" id="Color">
+                    <option value="Color">Color</option>
+                </select>
+                <select name="Material" id="Material">
+                    <option value="Material">Material</option>
+                </select>
+                <select name="Designer" id="Designer">
+                    <option value="Designer">Designer</option>
+                </select>
+                <select name="Stores" id="Stores">
+                    <option value="Stores">Stores</option>
+                </select>
+            </div>
+        </div>
+        <div id="container">
+            <div id="sidebar">
+                <select name="Sort by recomended" id="SortPrice">
+                    <option value="Sort by recomended">Sort by recomended</option>
+                    <option value="Descending">Sort by Price(High to Low)</option>
+                    <option value="Ascending">Sort by Price(Low to High)</option>
+                </select>
+            </div>
+            <div id="box"></div>
+        </div>
+    </div>
+
+
+
+    <!-- footer html start -->
+    <div>
+        <!-- start footer page -->
+        <div id="end">
+            <div id="review">
+                <img src="https://cdn.trustpilot.net/brand-assets/1.9.0/logo-black.svg" id="reviewlogo" />
+                <img src="https://cdn.trustpilot.net/brand-assets/4.1.0/stars/stars-4.5.svg" alt="" id="stars" />
+                <div id="rate">
+                    <p>TrustScore<b> 4.4</b></p>
+                    <p><b>2,713</b> reviews</p>
+                </div>
+                <div>
+                    <img src="https://drive.google.com/uc?export=view&id=1wxyQttweqV8PKv1s4ewuQsDFiE9fP3-f" alt="">
+                    <img src="https://drive.google.com/uc?export=view&id=1AUJISa5A1bfTQTf95Jv97qpavKYd-D0Q" alt="">
+                </div>
+
+                <div id="playstore">
+                    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="" />
+                    <img src="https://www.freepnglogos.com/uploads/google-play-png-logo/new-get-it-on-google-play-png-logo-20.png" alt="" />
+                </div>
+                <a href="#">Learn about the Lyst app for iPhone, iPad and Android.</a>
+                <p>Ⓒ 2022 Lyst</p>
+            </div>
+            
+            <div>
+                <div>
+                    <ul id="list1"><h4>International<i class="fa fa-plus" style="font-size:24px" id="plus1"></i></h4>
+                        <div id="l1">
+                            <li><a href="">Lyst - AU</a></li>
+                            <li><a href="">Lyst - CA</a></li>
+                            <li><a href="">Lyst - UK</a></li>
+                            <li><a href="">Lyst - Österreich</a></li>
+                            <li><a href="">Lyst - Schweiz</a></li>
+                            <li><a href="">Lyst - Deutschland</a></li>
+                            <li><a href="">Lyst - España</a></li>
+                            <li><a href="">Lyst - France</a></li>
+                            <li><a href="">Lyst - Italia</a></li>
+                            <li><a href="">Lyst - 日本</a></li>
+                            <li><a href="">Lyst - België</a></li>
+                            <li><a href="">Lyst - Nederland</a></li>
+                        </div>
+                    </ul>
+                </div>
+
+                <div>
+                    <ul id="list2">
+                        <h4>help and info <i class="fa fa-plus" style="font-size:24px" id="plus2"></i></h4>
+                        <div id="l2">
+                            <li><a href="">Help center</a></li>
+                            <li><a href="">About us</a></li>
+                            <li><a href="">Shipping policy </a></li>
+                            <li><a href="">Returns policy</a></li>
+                            <li><a href="">Payments</a></li>
+                            <li><a href="">Refund policy</a></li>
+                            <li><a href="">Developers</a></li>
+                            <li><a href="">Careers</a></li>
+                            <li><a href="">Contact</a></li>
+                            <li><a href="">Terms & conditions</a></li>
+                            <li><a href="">Privacy & cookie policy</a></li>
+                            <li><a href="">Intellectual property</a></li>
+                            <li><a href="">Categories</a></li>
+                            <li><a href="">Become a partner</a></li>
+                            <li><a href="">Lyst Insights</a></li>
+                            <li><a href="">Lyst News</a></li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <!-- end footer page -->
+    </div>
+    <!-- footer html end -->
 </body>
+
 </html>
-<script>
-    wsdata=[
-  { product_id :"ws1",
-    price : 1363,
-    category : "Boots",
-    brand : "OFF-WHITE C/O VIRGIL ABLOH",
-    img : "https://cdna.lystit.com/200/250/tr/photos/lncc/51946e86/prada-Black-Monolith-Boots.jpeg" },
-
-    { product_id :"ws2",
-    price : 1341,
-    category : "Boots",
-    brand : "GUCCI",
-    img : "	https://cdna.lystit.com/200/250/tr/photos/lncc/51946e86/prada-Black-Monolith-Boots.jpeg" },
-    { product_id :"ws3",
-    price : 577,
-    category : "Boots",
-    brand : "OFF-WHITE C/O VIRGIL ABLOH",
-    img : "https://cdna.lystit.com/200/250/tr/photos/bottegaveneta/df9022ce/bottega-veneta-flamingo-Puddle.jpeg" },
-    { product_id :"ws4",
-    price : 944,
-    category : "Boots",
-    brand : "BALENCIAGA",
-    img : "	https://cdna.lystit.com/200/250/tr/photos/mytheresa/45736075/balenciaga-black-Knife-Sock-Boots.jpeg"},
-    { product_id :"ws5",
-    price : 154,
-    category : "Boots",
-    brand : "COACH",
-    img : "https://cdna.lystit.com/200/250/tr/photos/allsole/a8763803/coach--Leigh-Leather-Knee-High-Boots.jpeg"},
-    { product_id :"ws6",
-    price : 1217,
-    category : "Boots",
-    brand : "DIOR",
-    img : "https://cdna.lystit.com/200/250/tr/photos/gilt/b5f9fd77/dior-Black-D-major-Leather-Long-Boot.jpeg"},
-    { product_id :"ws7",
-    price : 1063,
-    category : "Boots",
-    brand : "FENDI",
-    img : "https://cdna.lystit.com/200/250/tr/photos/cettire/4b253d64/fendi-Brown-Ff-Motif-Moon-Boots.jpeg" },
-    { product_id :"ws8",
-    price : 1050,
-    category : "Boots",
-    brand : "HUNTER",
-    img : "https://cdna.lystit.com/200/250/tr/photos/tessuti/1612b9ea/hunter-Red-Tall-Gloss-Welly-Boots.jpeg" },
-    { product_id :"ws9",
-    price : 1072,
-    category : "Boots",
-    brand : "HUNTER",
-    img : "https://cdna.lystit.com/200/250/tr/photos/tessuti/3a4182cf/hunter-Green-Tall-Matte-Welly-Boots.jpeg" },
-    { product_id :"ws10",
-    price :1319,
-    category : "Boots",
-    brand : "DIOR",
-    img : "	https://cdna.lystit.com/200/250/tr/photos/ruelala/aec057e8/dior-52X-D-major-Canvas-Rubber-Boot.jpeg"},
-    { product_id :"ws11",
-    price : 1664,
-    category : "Boots",
-    brand : "BALENCIAGA",
-    img :"https://cdna.lystit.com/200/250/tr/photos/gilt/7f04b4b3/balenciaga-Black-Tractor-Leather-Bootie.jpeg"},
-    { product_id :"ws12",
-    price : 1099,
-    category : "Boots",
-    brand : "GUCCI",
-    img : "https://cdna.lystit.com/200/250/tr/photos/gilt/015a9fb9/gucci-Black-Interlocking-G-Leather-Boot.jpeg" },
-    { product_id :"ws13",
-    price : 1048,
-    category : "Boots",
-    brand : "BALMAIN",
-    img : "https://cdna.lystit.com/200/250/tr/photos/mytheresa/c8b8fd3b/balmain-black-Skye-Sock-Boots.jpeg" },
 
 
-    { product_id :"ws14",
-    price : 550,
-    category : "Flats and flat shoes",
-    brand : "CHLOÉ",
-    img : "https://cdna.lystit.com/200/250/tr/photos/mytheresa/95dd4f25/chloe-black-Woody-Canvas-Slides.jpeg " },
-    { product_id :"ws15",
-    price : 758,
-    category : "Flats and flat shoes",
-    brand : "TORY BURCH",
-    img : "	https://cdna.lystit.com/200/250/tr/photos/toryburch/9c5dfdaa/tory-burch-Black-Thin-Flip-flop.jpeg" },
-    
-    { product_id :"ws16",
-    price : 1250,
-    category : "Flats and flat shoes",
-    brand : "KATE SPADE",
-    img : "https://cdna.lystit.com/200/250/tr/photos/allsole/ba1a6f07/kate-spade--Gogo-Glitter-Flats.jpeg" },
-    
-    { product_id :"ws17",
-    price : 1050,
-    category : "Flats and flat shoes",
-    brand : "COACH",
-    img : "	https://cdna.lystit.com/200/250/tr/photos/allsole/e9ae9222/coach--Marley-Leather-Driving-Shoes.jpeg" },
-    
-    { product_id :"ws18",
-    price : 1500,
-    category : "Flats and flat shoes",
-    brand : "GUCCI",
-    img : "	https://cdna.lystit.com/200/250/tr/photos/ruelala/e3f172c5/gucci-9074-Logo-Canvas-Espadrille.jpeg" },
-    
-    { product_id :"ws19",
-    price :1250,
-    category : "Flats and flat shoes",
-    brand : "GUCCI",
-    img : "	https://cdna.lystit.com/200/250/tr/photos/mytheresa/0b1d7a55/gucci-black-Pantoletten-GG.jpeg" },
-    
-    { product_id :"ws20",
-    price : 1207,
-    category : "Flats and flat shoes",
-    brand : "OFF-WHITE C/O VIRGIL ABLOH",
-    img : "	https://cdna.lystit.com/200/250/tr/photos/giglio/3059ff1a/off-white-co-virgil-abloh--Flat-Shoes.jpeg" },
-    
-    { product_id :"ws21",
-    price : 735,
-    category : "Flats and flat shoes",
-    brand : "CALVIN KLEIN",
-    img : "	https://cdna.lystit.com/200/250/tr/photos/saksoff5th/3b686dda/calvin-klein-White-Logo-Slides.jpeg" },
-    
-    { product_id :"ws22",
-    price : 1122,
-    category : "Flats and flat shoes",
-    brand : "UGG",
-    img : "https://cdna.lystit.com/200/250/tr/photos/allsole/b0da2292/ugg--Fluff-Yeah-Slippers.jpeg" },
-    
-    { product_id :"ws23",
-    price : 753,
-    category : "Flats and flat shoes",
-    brand : "BURBERRY",
-    img : "	https://cdna.lystit.com/200/250/tr/photos/mytheresa/2691fc48/burberry-black-Tb-Leather-Sandals.jpeg"},
-    
-    { product_id :"ws24",
-    price : 550,
-    category : "Flats and flat shoes",
-    brand : "OFF-WHITE C/O VIRGIL ABLOH",
-    img : "	https://cdna.lystit.com/200/250/tr/photos/giglio/6afcdb47/off-white-co-virgil-abloh--Shoes.jpeg" },
-    
-    { product_id :"ws25",
-    price : 868,
-    category : "Flats and flat shoes",
-    brand : "GUCCI",
-    img : "	https://cdna.lystit.com/200/250/tr/photos/mytheresa/19033228/gucci-blue-Schuhe.jpeg" },
-    
-   
-    { product_id :"ws26",
-    price : 746,
-    category : "Flats and flat shoes",
-    brand : "GUCCI",
-    img : "https://cdna.lystit.com/200/250/tr/photos/mytheresa/ef3fa483/gucci-pink-Sandales-en-caoutchouc.jpeg" },
 
-
-    { product_id :"ws27",
-    price : 627,
-    category : "Heels",
-    brand : "GUCCI",
-    img : "	https://cdna.lystit.com/200/250/tr/photos/mytheresa/806f2840/gucci-pink-Mules-in-gomma-GG.jpeg" },
-    { product_id :"ws28",
-    price : 776,
-    category : "Heels",
-    brand : "SAINT LAURENT",
-    img : "https://cdna.lystit.com/200/250/tr/photos/gilt/aa7b519f/saint-laurent-White-Opyum-110-Leather-Sandal.jpeg" },
-    
-    { product_id :"ws29",
-    price : 550,
-    category : "Heels",
-    brand : "OFF-WHITE C/O VIRGIL ABLOH",
-    img : "https://cdna.lystit.com/200/250/tr/photos/cettire/0037fdc8/off-white-co-virgil-abloh-Black-Meteor-Logo-Printed-Slip-on-Mules.jpeg" },
-    
-    { product_id :"ws30",
-    price : 699,
-    category : "Heels",
-    brand : "OFF-WHITE C/O VIRGIL ABLOH",
-    img : "https://cdna.lystit.com/200/250/tr/photos/cettire/cf90ea7e/off-white-co-virgil-abloh-Black-Padded-Large-Bow-Detailed-Sandals.jpeg" },
-    
-    { product_id :"ws31",
-    price : 601,
-    category : "Heels",
-    brand : "OFF-WHITE C/O VIRGIL ABLOH",
-    img : "https://cdna.lystit.com/200/250/tr/photos/cettire/8c5ef02c/off-white-co-virgil-abloh-Multi-Zebra-Pattern-Slip-on-Sandals.jpeg" },
-    
-    { product_id :"ws32",
-    price : 1343,
-    category : "Heels",
-    brand : "OFF-WHITE C/O VIRGIL ABLOH",
-    img : "https://cdna.lystit.com/200/250/tr/photos/mytheresa/d4929cb6/gucci-black-Verzierte-Slingback-Pumps-GG.jpeg" },
-    
-    { product_id :"ws33",
-    price : 1553,
-    category : "Heels",
-    brand : "OFF-WHITE C/O VIRGIL ABLOHi",
-    img : "https://cdna.lystit.com/200/250/tr/photos/theoutnet/699b6c15/off-white-co-virgil-abloh-black-Hohe-pumps.jpeg" },
-    
-    { product_id :"ws34",
-    price : 1074,
-    category : "Heels",
-    brand : "GUCCI",
-    img : "https://cdna.lystit.com/200/250/tr/photos/mytheresa/3461e406/gucci-black-Sandales-Double-G-en-cuir.jpeg" },
-    
-    { product_id :"ws35",
-    price : 1503,
-    category : "Heels",
-    brand : "GUCCI",
-    img : "https://cdna.lystit.com/200/250/tr/photos/carolazeta/85774b3f/off-white-co-virgil-abloh-Black-Allen-Mules-Lycra-Bow.jpeg" },
-    
-    { product_id :"ws36",
-    price : 1074,
-    category : "Heels",
-    brand : "GUCCI",
-    img : "https://cdna.lystit.com/200/250/tr/photos/mytheresa/43ef4cbf/gucci-white-Zehensandalen-Double-G-aus-Leder.jpeg" },
-    { product_id :"ws37",
-    price : 556,
-    category : "Heels",
-    brand : "OFF-WHITE C/O VIRGIL ABLOH",
-    img : "https://cdna.lystit.com/200/250/tr/photos/cettire/71f39c03/off-white-co-virgil-abloh-Pink-Xenut-Slip-on-Mules.jpeg" },
-    
-    { product_id :"ws38",
-    price : 1074,
-    category : "Heels",
-    brand : "GUCCI",
-    img : "https://cdna.lystit.com/200/250/tr/photos/mytheresa/f93952e4/gucci-black-Marmont-Leather-Sandals.jpeg" },
-    
-    { product_id :"ws39",
-    price : 749,
-    category : "Heels",
-    brand : "OFF-WHITE C/O VIRGIL ABLOH",
-    img : "https://cdna.lystit.com/200/250/tr/photos/mclabels/09afd791/off-white-co-virgil-abloh-ROSA-Leder-sandalen.jpeg" },
-    
-    
-    { product_id :"ws40",
-    price : 208,
-    category : "Sneakers",
-    brand : "OFF-WHITE C/O VIRGIL ABLOHi",
-    img : "https://cdna.lystit.com/200/250/tr/photos/mytheresa/e5e82d41/off-white-co-virgil-abloh-green-Low-Vulcanized-Canvas-Sneakers.jpeg" },
-    { product_id :"ws41",
-    price : 991,
-    category : "Sneakers",
-    brand : "GUCCI",
-    img : "https://cdna.lystit.com/200/250/tr/photos/mytheresa/d8339f95/gucci-white-Verzierte-Sneakers-Ace-aus-Leder.jpeg" },
-    { product_id :"ws42",
-    price : 176,
-    category : "Sneakers",
-    brand : "OFF-WHITE C/O VIRGIL ABLOH",
-    img : "https://cdna.lystit.com/200/250/tr/photos/mytheresa/f9170209/off-white-co-virgil-abloh-white-Exklusiv-bei-Mytheresa-Sneakers-Vulcanized.jpeg" },
-    { product_id :"ws43",
-    price : 1186,
-    category : "Sneakers",
-    brand : "GUCCI",
-    img : "https://cdna.lystit.com/200/250/tr/photos/mytheresa/11bc0f1a/gucci-multicoloured-GG-Rhyton-Leather-trimmed-Sneakers.jpeg" },
-    { product_id :"ws44",
-    price : 274,
-    category : "Sneakers",
-    brand : "OFF-WHITE C/O VIRGIL ABLOH",
-    img : "https://cdna.lystit.com/200/250/tr/photos/mytheresa/bcc746b2/off-white-co-virgil-abloh-white-Out-Of-Office-Leather-Sneakers.jpeg" },
-    { product_id :"ws45",
-    price : 841,
-    category : "Sneakers",
-    brand : "GUCCI",
-    img : "https://cdna.lystit.com/200/250/tr/photos/mytheresa/92545bd9/gucci-beige-Tennis-1977-Canvas-Sneakers.jpeg" },
-    { product_id :"ws46",
-    price : 274,
-    category : "Sneakers",
-    brand : "OFF-WHITE C/O VIRGIL ABLOH",
-    img : "https://cdna.lystit.com/200/250/tr/photos/mytheresa/3bf4390c/off-white-co-virgil-abloh-beige-Low-Vulcanized-Canvas-And-Suede-Sneakers.jpeg" },
-    { product_id :"ws47",
-    price : 809,
-    category : "Sneakers",
-    brand : "GUCCI",
-    img : "https://cdna.lystit.com/200/250/tr/photos/net-a-porter/a772916a/gucci-Neutrals-Gg-Supreme-Leather-And-Logo-jacquard-Canvas-Sneakers.jpeg" },
-    { product_id :"ws48",
-    price : 208,
-    category : "Sneakers",
-    brand : "OFF-WHITE C/O VIRGIL ABLOH",
-    img : "https://cdna.lystit.com/200/250/tr/photos/mytheresa/09ad5cd5/off-white-co-virgil-abloh-white-Vulcanized-Canvas-Sneakers.jpeg" },
-    { product_id :"ws49",
-    price : 52,
-    category : "Sneakers",
-    brand : "NIKE",
-    img : "https://cdna.lystit.com/200/250/tr/photos/cettire/89776ff8/nike-White-Court-Vision-Low-Top-Sneakers.jpeg" },
-    { product_id :"ws50",
-    price : 551,
-    category : "Sneakers",
-    brand : "GUCCI",
-    img : "https://cdna.lystit.com/200/250/tr/photos/ruelala/8f3a8353/gucci-White-Ace-Interlocking-G-Leather-Sneaker.jpeg" },
-    { product_id :"ws51",
-    price : 537,
-    category : "Sneakers",
-    brand : "OFF-WHITE C/O VIRGIL ABLOH",
-    img : "https://cdna.lystit.com/200/250/tr/photos/mytheresa/ca2cd084/off-white-co-virgil-abloh-pink-Odsy-1000-Sneakers.jpeg" },
-    { product_id :"ws52",
-    price : 722,
-    category : "Sneakers",
-    brand : "BALENCIAGA",
-    img : "https://cdna.lystit.com/200/250/tr/photos/ruelala/6ba27c8f/balenciaga-Pink-Triple-S-Clear-Sole-Sneaker.jpeg" },
-    ];
-    display(wsdata);
-    function display(wsdata){
-        document.querySelector("#products").innerHTML="";        
-            wsdata.forEach(function(elem){
-            let smallbox=document.createElement("div");
-            let image=document.createElement("img");
-            let id=document.createElement("h4");
-            let brand=document.createElement("h3");
-            let category=document.createElement("h4");
-            let price=document.createElement("p");
-            let btn=document.createElement("button");
-            image.setAttribute("src",elem.img);
-            id.innerText=elem.product_id;
-            brand.innerText=elem.brand;
-            category.innerText=elem.category;
-            price.innerText="$"+elem.price;
-            btn.innerText="Add to Cart";
-            smallbox.append(image,brand,id,category,price,btn);
-            document.querySelector("#products").append(smallbox);
-        })
-    }
-    
-document.querySelector("#Category").addEventListener("change",function(){
-let val=document.querySelector("#Category").value;
-if(val=="All"){
-display(wsdata);
-}
-else{
-    let filtered=wsdata.filter(function(elem){
-        return  elem.category==val;
-    })
-    display(filtered);
-}
-})
-document.querySelector("#Brand").addEventListener("change",function(){
-    let val=document.querySelector("#Brand").value;
-    if(val=="All"){
-    display(wsdata);
-    }
-    else{
-        let filtered=wsdata.filter(function(elem){
-            return  elem.brand==val;
-        })
-        display(filtered);
-    }
-    })
-
-document.querySelector("#pricesort").addEventListener("change",function(){
-    let val=document.querySelector("#pricesort").value;
-    if(val=="ascending"){
-        wsdata.sort(function(a,b){
-          if(a.price<b.price) return -1
-          if(a.price>b.price) return 1
-          return 0;
-          })
-        display(wsdata);
-      }
-      else if(val=="descending"){
-        wsdata.sort(function(a,b){
-          if(a.price<b.price) return 1
-          if(a.price>b.price) return -1
-          return 0;
-          })
-          display(wsdata);
-      }
-})
-        </script>
+<script src="women_shoes.js"></script>
