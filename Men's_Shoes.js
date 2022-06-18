@@ -387,7 +387,7 @@ function displayProducts(ms_prod_data) {
                 alert("Product already in the cart") 
             }
         })
-
+        elem.quant=1;
         product1.append(img)
         product2.append(name, product_name, price)
         product3.append(btn)

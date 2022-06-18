@@ -126,6 +126,6 @@ function redirect() {
 }
 document.querySelector( "#menu_icon" ).addEventListener( "click", redirect_womenspage );
 function redirect_womenspage() {
-    window.location.href = "womenslist.html";
+    window.location.href = "womens.html";
     // window.location.reload();
 }
