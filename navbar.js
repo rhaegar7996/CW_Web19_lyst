@@ -1,3 +1,15 @@
+//cartbutton after login logic//
+let loggedIn = Boolean(localStorage.getItem('loggedIn')) || false;
+if(loggedIn===true) {
+ loginbut = document.querySelector('#navbar > div:nth-child(1) > p:nth-child(6) > a')
+ loginbut.innerText=' 🛒 '
+ 
+ loginbut.setAttribute('href','cart.html')
+
+ signinbut = document.querySelector('#navbar > div:nth-child(1) > p:nth-child(5) > a')
+ signinbut.innerText = ''
+}
+//cartbutton after login logic//
 ScrollOut( {
     cssProps: true,
     threshold: 0.2
