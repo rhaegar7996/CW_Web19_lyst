@@ -537,4 +537,8 @@
     cartData = JSON.parse(localStorage.getItem("cartData"));
     console.log(cartData);
   }
+  document.querySelector("#logo").addEventListener("click", redirect);
+  function redirect() {
+    window.location.href = "index.html";
+  }
 </script>
