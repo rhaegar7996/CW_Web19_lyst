@@ -391,4 +391,6 @@ wsdata=[
               })
               displayProducts(wsdata);
           }
-      })
+      } )
+document.querySelector( "#navbar" ).style.width = "100%";
+document.querySelector( "#navbar" ).style.height = "105px";
