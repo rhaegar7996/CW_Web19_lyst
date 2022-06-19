@@ -370,7 +370,7 @@ function displayProducts( mc_prod_data ) {
         name.innerText = elem.brand
 
         let product_name = document.createElement( "p" )
-        product_name.innerText = elem.product_name
+        product_name.innerText = elem.category
 
         let price = document.createElement( "h3" )
         price.innerText = "$" + elem.price
