@@ -490,11 +490,11 @@ h1{
            
             <label class="full" for="">Email address</label>
          <br>
-            <input class="full in" id = 'email' type="text" required placeholder="Enter your email address"/>
+            <input class="full in" id = 'email' type="text"  placeholder="Enter your email address"/>
             <br><br>
             <label  class="full"for="">Password</label>
             <br>
-            <input class="full in" id = 'pass' type="text" placeholder="min 8 characters" required/>
+            <input class="full in" id = 'pass' type="text" placeholder="min 8 characters" />
             <br><br>
             
             <input class="full" id="submit" type="submit" value="Sign in"/>
@@ -527,13 +527,13 @@ let form = document.querySelector('form');
 let userData = JSON.parse(localStorage.getItem('userData')) || [];
 let loggedIn = Boolean(localStorage.getItem('loggedIn')) || false;
 if(loggedIn) {
-        window.location.href = 'mens.html';
+        window.location.href = 'index.html';
 }
 
 form.addEventListener('submit',function(e)
 {  e.preventDefault;
     let data = {
-        email: form.eml.value,
+        email: form.email.value,
         password: form.pass.value,
     }
     if(checkSignin(data.email,data.password)===true)
@@ -543,7 +543,7 @@ form.addEventListener('submit',function(e)
             localStorage.setItem('loggedIn',loggedIn);
             alert('login successful');
        
-        window.location.href = "mens.html";
+        window.location.href = "index.html";
     }
     else{
         alert('Wrong username or password')
