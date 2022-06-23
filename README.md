@@ -28,7 +28,7 @@ Clone the project
 
 ## Authors
 
-- [@Mohit Agarwal(Team Lead)](https://github.com/rhaegar7996)
+- [@Mohit Agarwal](https://github.com/rhaegar7996)
 - [@Harsh Upadhayay](https://github.com/harshu878)
 - [@Urvashi Sohaliya](https://github.com/UrvashiSohaliya2511)
 - [@Gautam Kumar](https://github.com/gautamprajapat8)
